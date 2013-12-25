@@ -1,6 +1,6 @@
 #include "TestOrganizerScene.h"
 #include "yhgui/yhgui.h"
-#include "Event/EventHandle.h"
+#include <yhge/Event/EventHandle.h>
 #include "yhgui/interactive/DocumentTreeOrganizer.h"
 #include "yhgui/interactive/IndependentDocumentTreeOrganizer.h"
 

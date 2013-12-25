@@ -1,6 +1,6 @@
 #include "TestListOrganizerScene.h"
 #include "yhgui/yhgui.h"
-#include "Event/EventHandle.h"
+#include <yhge/Event/EventHandle.h>
 #include "yhgui/interactive/ListOrganizer.h"
 #include "yhgui/interactive/OrderedListOrganizer.h"
 

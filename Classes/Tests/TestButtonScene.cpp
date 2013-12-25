@@ -1,7 +1,7 @@
 #include "TestButtonScene.h"
+#include <yhge/Event/EventHandle.h>
 #include "yhgui/yhgui.h"
 #include "yhgui/interactive/DocumentTreeOrganizer.h"
-#include "Event/EventHandle.h"
 #include "../TestMainScene.h"
 
 USING_NS_CC;
@@ -92,37 +92,37 @@ bool TestButton::init()
     return true;
 }
 
-void TestButton::onTouchDown(cocos2d::yhlib::Event* event)
+void TestButton::onTouchDown(cocos2d::yhge::Event* event)
 {
     CCLOG("onTouchDown");
 }
 
-void TestButton::onTouchMove(cocos2d::yhlib::Event* event)
+void TestButton::onTouchMove(cocos2d::yhge::Event* event)
 {
     CCLOG("onTouchMove,is inside:%d",static_cast<CCBool*>(event->getData())->getValue());
 }
 
-void TestButton::onTouchMoveEnter(cocos2d::yhlib::Event* event)
+void TestButton::onTouchMoveEnter(cocos2d::yhge::Event* event)
 {
      CCLOG("onTouchMoveEnter");
 }
 
-void TestButton::onTouchMoveExit(cocos2d::yhlib::Event* event)
+void TestButton::onTouchMoveExit(cocos2d::yhge::Event* event)
 {
     CCLOG("onTouchMoveExit");
 }
 
-void TestButton::onTouchUpInside(cocos2d::yhlib::Event* event)
+void TestButton::onTouchUpInside(cocos2d::yhge::Event* event)
 {
     CCLOG("onTouchUpInside");
 }
 
-void TestButton::onTouchUpOutside(cocos2d::yhlib::Event* event)
+void TestButton::onTouchUpOutside(cocos2d::yhge::Event* event)
 {
     CCLOG("onTouchUpOutside");
 }
 
-void TestButton::onBack(cocos2d::yhlib::Event *event)
+void TestButton::onBack(cocos2d::yhge::Event *event)
 {
     CCDirector::sharedDirector()->replaceScene(TestMain::scene());
 }

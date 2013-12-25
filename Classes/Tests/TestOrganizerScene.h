@@ -2,7 +2,6 @@
 #define __TestOrganizer_SCENE_H__
 
 #include "cocos2d.h"
-#include "Event/Event.h"
 
 class TestOrganizer : public cocos2d::CCLayer
 {
