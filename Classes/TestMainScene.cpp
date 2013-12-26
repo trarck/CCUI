@@ -1,5 +1,5 @@
 #include "TestMainScene.h"
-#include "yhgui/yhgui.h"
+#include <yhgui/yhgui.h>
 #include "Tests/TestButtonScene.h"
 #include "Tests/TestOrganizerScene.h"
 #include "Tests/TestListOrganizerScene.h"
