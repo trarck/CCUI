@@ -151,6 +151,13 @@
 			remoteGlobalIDString = 578E5F5318680D830042319C;
 			remoteInfo = yhge;
 		};
+		577A7A1E186D8CB300F1B5D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 577A7A1A186D8CB300F1B5D5 /* yhmvc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57C664731867EBE600018691;
+			remoteInfo = yhmvc;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -359,6 +366,7 @@
 		577A79C8186D342B00F1B5D5 /* SimpleAudioEngine_objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine_objc.h; sourceTree = "<group>"; };
 		577A79C9186D342B00F1B5D5 /* SimpleAudioEngine_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine_objc.m; sourceTree = "<group>"; };
 		577A7A13186D6B7F00F1B5D5 /* yhge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = yhge.xcodeproj; path = ../../yhge/proj.ios/yhge.xcodeproj; sourceTree = "<group>"; };
+		577A7A1A186D8CB300F1B5D5 /* yhmvc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = yhmvc.xcodeproj; path = ../../yhmvc/proj.ios/yhmvc.xcodeproj; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -703,6 +711,7 @@
 				15A3D87E1682F7B3002FB0C5 /* cocos2dx.xcodeproj */,
 				577A7A13186D6B7F00F1B5D5 /* yhge.xcodeproj */,
 				577A79AC186C3D1700F1B5D5 /* yhgui.xcodeproj */,
+				577A7A1A186D8CB300F1B5D5 /* yhmvc.xcodeproj */,
 				15AA9C4015B7EC450033D6C2 /* Classes */,
 				577A77FA186BF43300F1B5D5 /* Libs */,
 				15A3D9B31682F826002FB0C5 /* extensions */,
@@ -868,6 +877,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		577A7A1B186D8CB300F1B5D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				577A7A1F186D8CB300F1B5D5 /* libyhmvc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -940,6 +957,10 @@
 					ProductGroup = 577A79AD186C3D1700F1B5D5 /* Products */;
 					ProjectRef = 577A79AC186C3D1700F1B5D5 /* yhgui.xcodeproj */;
 				},
+				{
+					ProductGroup = 577A7A1B186D8CB300F1B5D5 /* Products */;
+					ProjectRef = 577A7A1A186D8CB300F1B5D5 /* yhmvc.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -968,6 +989,13 @@
 			fileType = archive.ar;
 			path = libyhge.a;
 			remoteRef = 577A7A17186D6B7F00F1B5D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		577A7A1F186D8CB300F1B5D5 /* libyhmvc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libyhmvc.a;
+			remoteRef = 577A7A1E186D8CB300F1B5D5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
