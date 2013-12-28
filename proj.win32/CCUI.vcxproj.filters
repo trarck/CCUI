@@ -28,6 +28,12 @@
     <Filter Include="Classes\Tests">
       <UniqueIdentifier>{4f7d0ae0-f202-44db-8a06-22a8748d31b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Scenes">
+      <UniqueIdentifier>{af99fc1f-ff9a-4cd5-b860-5afcbed142bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Controllers">
+      <UniqueIdentifier>{79b436cd-6f58-4dd2-bbcc-165947243be9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,9 +51,6 @@
     <ClCompile Include="..\Libs\Jsoncpp\src\lib_json\json_writer.cpp">
       <Filter>Libs\Jsoncpp\src\lib_json</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\TestMainScene.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Tests\TestButtonScene.cpp">
       <Filter>Classes\Tests</Filter>
     </ClCompile>
@@ -59,6 +62,45 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Tests\TestOrganizerScene.cpp">
       <Filter>Classes\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\BaseScene.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\GameSceneDirector.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\MainScene.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controllers\FooterController.cpp">
+      <Filter>Classes\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controllers\HeaderController.cpp">
+      <Filter>Classes\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controllers\MainController.cpp">
+      <Filter>Classes\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\TestButtonScene.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controllers\TestButtonController.cpp">
+      <Filter>Classes\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\TestDocumentOrgnaizerScene.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\TestListOrgnaizerScene.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controllers\TestDocumentOrgnaizerController.cpp">
+      <Filter>Classes\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controllers\TestListOrgnaizerController.cpp">
+      <Filter>Classes\Controllers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -95,9 +137,6 @@
     <ClInclude Include="..\Libs\Jsoncpp\src\lib_json\json_batchallocator.h">
       <Filter>Libs\Jsoncpp\src\lib_json</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\TestMainScene.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Tests\TestButtonScene.h">
       <Filter>Classes\Tests</Filter>
     </ClInclude>
@@ -109,6 +148,54 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Tests\TestOrganizerScene.h">
       <Filter>Classes\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CCUIMacros.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\BaseScene.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\GameSceneDirector.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\SceneDefine.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\SceneRegisterData.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\MainScene.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controllers\FooterController.h">
+      <Filter>Classes\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controllers\HeaderController.h">
+      <Filter>Classes\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controllers\MainController.h">
+      <Filter>Classes\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\TestButtonScene.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controllers\TestButtonController.h">
+      <Filter>Classes\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\TestDocumentOrgnaizerScene.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\TestListOrgnaizerScene.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controllers\TestDocumentOrgnaizerController.h">
+      <Filter>Classes\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controllers\TestListOrgnaizerController.h">
+      <Filter>Classes\Controllers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

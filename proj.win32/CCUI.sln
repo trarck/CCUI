@@ -31,7 +31,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libchipmunk", "..\..\..\ext
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libyhge", "..\..\yhge\proj.win32\yhge.vcxproj", "{51EC1159-5E48-4D92-95D9-00295679FE9A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libYhgui", "..\..\yhgui\proj.win32\yhgui.vcxproj", "{BCC411E3-8C8B-4B7C-8B41-019C585BB625}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libyhgui", "..\..\yhgui\proj.win32\yhgui.vcxproj", "{BCC411E3-8C8B-4B7C-8B41-019C585BB625}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libyhmvc", "..\..\yhmvc\proj.win32\yhmvc.vcxproj", "{C01353CE-386C-4D1A-BC2E-C7789B4CCD87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{BCC411E3-8C8B-4B7C-8B41-019C585BB625}.Debug|Win32.Build.0 = Debug|Win32
 		{BCC411E3-8C8B-4B7C-8B41-019C585BB625}.Release|Win32.ActiveCfg = Release|Win32
 		{BCC411E3-8C8B-4B7C-8B41-019C585BB625}.Release|Win32.Build.0 = Release|Win32
+		{C01353CE-386C-4D1A-BC2E-C7789B4CCD87}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C01353CE-386C-4D1A-BC2E-C7789B4CCD87}.Debug|Win32.Build.0 = Debug|Win32
+		{C01353CE-386C-4D1A-BC2E-C7789B4CCD87}.Release|Win32.ActiveCfg = Release|Win32
+		{C01353CE-386C-4D1A-BC2E-C7789B4CCD87}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

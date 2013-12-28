@@ -1,0 +1,38 @@
+#ifndef CCUI_CONTROLLERS_TESTBUTTONCONTROLLER_H_
+#define CCUI_CONTROLLERS_TESTBUTTONCONTROLLER_H_
+
+#include <yhge/Event/Event.h>
+#include "yhmvc/Core/LayerController.h"
+#include "yhmvc/Core/Layer.h"
+#include "CCUIMacros.h"
+
+NS_CC_UI_BEGIN
+
+/**
+ * 单独的。
+ * 由Scene来组合controller。
+ * 可以添加其它controller来作为显示内容
+ * 由于结构简单不容易出错。
+ */
+class TestButtonController:public yhmvc::LayerController
+{
+public:
+	
+    TestButtonController(void);
+    
+	~TestButtonController(void);
+
+	void layerDidLoad();
+
+    void onTouchDown(cocos2d::yhge::Event* event);
+    void onTouchMove(cocos2d::yhge::Event* event);
+    void onTouchMoveEnter(cocos2d::yhge::Event* event);
+    void onTouchMoveExit(cocos2d::yhge::Event* event);
+    void onTouchUpInside(cocos2d::yhge::Event* event);
+    void onTouchUpOutside(cocos2d::yhge::Event* event);
+    
+    void onBack(cocos2d::yhge::Event* event);
+};
+NS_CC_UI_END
+
+#endif //CCUI_CONTROLLERS_TESTBUTTONCONTROLLER_H_
