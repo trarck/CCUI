@@ -51,16 +51,7 @@
     <ClCompile Include="..\Libs\Jsoncpp\src\lib_json\json_writer.cpp">
       <Filter>Libs\Jsoncpp\src\lib_json</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Tests\TestButtonScene.cpp">
-      <Filter>Classes\Tests</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Tests\Box.cpp">
-      <Filter>Classes\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Tests\TestListOrganizerScene.cpp">
-      <Filter>Classes\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Tests\TestOrganizerScene.cpp">
       <Filter>Classes\Tests</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Game.cpp">
@@ -102,6 +93,15 @@
     <ClCompile Include="..\Classes\Controllers\TestListOrgnaizerController.cpp">
       <Filter>Classes\Controllers</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\ThreeSegmentScene.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Controllers\ThreeSegmentController.cpp">
+      <Filter>Classes\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Tests\MenuItemUtil.cpp">
+      <Filter>Classes\Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -137,16 +137,7 @@
     <ClInclude Include="..\Libs\Jsoncpp\src\lib_json\json_batchallocator.h">
       <Filter>Libs\Jsoncpp\src\lib_json</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Tests\TestButtonScene.h">
-      <Filter>Classes\Tests</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Tests\Box.h">
-      <Filter>Classes\Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Tests\TestListOrganizerScene.h">
-      <Filter>Classes\Tests</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Tests\TestOrganizerScene.h">
       <Filter>Classes\Tests</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Game.h">
@@ -196,6 +187,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Controllers\TestListOrgnaizerController.h">
       <Filter>Classes\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\ThreeSegmentScene.h">
+      <Filter>Classes\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controllers\ThreeSegmentController.h">
+      <Filter>Classes\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Tests\MenuItemUtil.h">
+      <Filter>Classes\Tests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

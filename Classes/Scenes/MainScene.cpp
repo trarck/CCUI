@@ -32,7 +32,7 @@ void MainScene::loadContents()
 	this->addChild(headerController->getLayer());
     addLayerController(headerController);
     headerController->release();
-    
+
     headerController->getLayer()->setPosition(ccp(0.0f, screenSize.height-headerHeight));
     
     

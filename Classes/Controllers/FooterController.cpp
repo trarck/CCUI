@@ -22,41 +22,39 @@ void FooterController::layerDidLoad()
 {
     CCSize screenSize=CCDirector::sharedDirector()->getWinSize();
     
-    CCMenuItemLabel *homeItem=CCMenuItemLabel::create(CCLabelTTF::create("home", "Arial", 20),
+    m_backButton=CCMenuItemLabel::create(CCLabelTTF::create("back", "Arial", 20),
                                                       this,
-                                                      menu_selector(FooterController::homeCallback));
-    homeItem->setPosition(ccp(60,20));
+                                                      menu_selector(FooterController::backCallback));
+    m_backButton->setPosition(ccp(60,20));
     
-    CCMenuItemLabel *battleItem=CCMenuItemLabel::create(CCLabelTTF::create("battle", "Arial", 20),
-                                                      this,
-                                                      menu_selector(FooterController::battleCallback));
-    battleItem->setPosition(ccp(160,20));
-    
-    
-    CCMenuItemLabel *helpItem=CCMenuItemLabel::create(CCLabelTTF::create("help", "Arial", 20),
+    CCMenuItemLabel *exitItem=CCMenuItemLabel::create(CCLabelTTF::create("exit", "Arial", 20),
                                                         this,
-                                                        menu_selector(FooterController::helpCallback));
-    helpItem->setPosition(ccp(screenSize.width-100,20));
+                                                        menu_selector(FooterController::exitCallback));
+    exitItem->setPosition(ccp(screenSize.width-100,20));
     
-    CCMenu* menu=CCMenu::create(homeItem,battleItem,helpItem,NULL);
+    CCMenu* menu=CCMenu::create(m_backButton,exitItem,NULL);
     
     menu->setPosition( CCPointZero );
     
     m_layer->addChild(menu);
 }
 
-void FooterController::homeCallback(CCObject* pSender)
+void FooterController::backCallback(CCObject* pSender)
 {
-    GameSceneDirector::getInstance()->replaceScene(kMainScene);
+	if (GameSceneDirector::getInstance()->getSceneStackSize()>1)
+	{
+		GameSceneDirector::getInstance()->popScene();
+	}
 }
 
-void FooterController::battleCallback(CCObject* pSender)
+void FooterController::exitCallback(CCObject* pSender)
 {
-    //GameSceneDirector::getInstance()->replaceScene(kMainScene);
-}
+	m_layer->removeAllChildrenWithCleanup(true);
+    CCDirector::sharedDirector()->end();
 
-void FooterController::helpCallback(CCObject* pSender)
-{
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    exit(0);
+#endif
     //GameSceneDirector::getInstance()->replaceScene(kMainScene);
 }
 

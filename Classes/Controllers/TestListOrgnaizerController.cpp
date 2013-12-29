@@ -6,6 +6,8 @@
 #include "yhmvc/Core/Layer.h"
 #include "Scenes/GameSceneDirector.h"
 #include "Tests/Box.h"
+#include "Tests/MenuItemUtil.h"
+#include "HeaderController.h"
 
 USING_NS_CC;
 USING_NS_CC_YHGE;
@@ -27,31 +29,31 @@ TestListOrgnaizerController::~TestListOrgnaizerController(void)
 
 void TestListOrgnaizerController::layerDidLoad()
 {
-    CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-    CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
 
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
+	CCArray* items=CCArray::create();
 
-    // add a "close" icon to exit the progress. it's an autorelease object
-    
-    CCMenuItemLabel* pTestPerformance=CCMenuItemLabel::create(CCLabelTTF::create("test performens", "Arial", 24), this,menu_selector(TestListOrgnaizerController::testPerformanceCallback));
-    pTestPerformance->setPosition(ccp(110,20));
-    
-    CCMenuItemLabel* pTestZOrder=CCMenuItemLabel::create(CCLabelTTF::create("test zorder", "Arial", 24), this,menu_selector(TestListOrgnaizerController::testZOrderCallback));
-    pTestZOrder->setPosition(ccp(300,20));
+	items->addObject(MenuItemUtil::createTestMenuItemLabel("test performens",kTestListOrgnaizerPerformanceScene));
+	items->addObject(MenuItemUtil::createTestMenuItemLabel("test zorder",kTestListOrgnaizerZOrderScene));
     
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pTestPerformance,pTestZOrder,NULL);
-    pMenu->setPosition(CCPointZero);
+	CCSize contentSize=getPreferredContentSize();
+    CCMenu* pMenu = CCMenu::createWithArray(items);
+    pMenu->setPosition(ccp(contentSize.width/2,0));
+	pMenu->alignItemsVertically();
+
     m_layer->addChild(pMenu, 1);
 
 }
 
 
-void TestListOrgnaizerController::testPerformanceCallback(CCObject* pSender)
+void TestListOrgnaizerPerformanceController::layerDidLoad()
 {
+	yhmvc::Scene* scene=GameSceneDirector::getInstance()->getRunningScene();
+	HeaderController* headerController=static_cast<HeaderController*>(scene->getLayerControllerByName("HeaderController"));
+	if (headerController)
+	{
+		headerController->setTitle("test list orgnaizer performance");
+	}
 //    ListOrganizer* organizer=new ListOrganizer();
     OrderedListOrganizer* organizer=new OrderedListOrganizer();
     organizer->init();
@@ -102,8 +104,14 @@ void TestListOrgnaizerController::testPerformanceCallback(CCObject* pSender)
     }
 }
 
-void TestListOrgnaizerController::testZOrderCallback(CCObject* pSender)
+void TestListOrgnaizerZOrderController::layerDidLoad()
 {
+	yhmvc::Scene* scene=GameSceneDirector::getInstance()->getRunningScene();
+	HeaderController* headerController=static_cast<HeaderController*>(scene->getLayerControllerByName("HeaderController"));
+	if (headerController)
+	{
+		headerController->setTitle("test list orgnaizer zorder");
+	}
 //    ListOrganizer* organizer=new ListOrganizer();
     OrderedListOrganizer* organizer=new OrderedListOrganizer();
     organizer->init();

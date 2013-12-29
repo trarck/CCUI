@@ -32,7 +32,11 @@ static SceneRegisterItem kSceneRegisterData[]=
     {kMainScene,SCENE_CREATE_SELECTOR(MainScene::create)},
 	{kTestButtonScene,SCENE_CREATE_SELECTOR(TestButtonScene::create)},
 	{kTestDocumentOrgnaizerScene,SCENE_CREATE_SELECTOR(TestDocumentOrgnaizerScene::create)},
+	{kTestDocumentOrgnaizerPerformanceScene,SCENE_CREATE_SELECTOR(TestDocumentOrgnaizerPerformanceScene::create)},
+	{kTestDocumentOrgnaizerZOrderScene,SCENE_CREATE_SELECTOR(TestDocumentOrgnaizerZOrderScene::create)},
 	{kTestListOrgnaizerScene,SCENE_CREATE_SELECTOR(TestListOrgnaizerScene::create)},
+	{kTestListOrgnaizerPerformanceScene,SCENE_CREATE_SELECTOR(TestListOrgnaizerPerformanceScene::create)},
+	{kTestListOrgnaizerZOrderScene,SCENE_CREATE_SELECTOR(TestListOrgnaizerZOrderScene::create)},
 };
 
 NS_CC_UI_END

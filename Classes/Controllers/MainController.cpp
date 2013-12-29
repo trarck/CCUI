@@ -1,36 +1,12 @@
 #include "MainController.h"
 #include "yhmvc/Core/Layer.h"
 #include "Scenes/GameSceneDirector.h"
+#include "Tests/MenuItemUtil.h"
 
 USING_NS_CC;
 USING_NS_CC_YHMVC;
 
 NS_CC_UI_BEGIN
-
-class GotoSceneProxy:public CCObject
-{
-public:
-	GotoSceneProxy():m_gotoSceneName("")
-	{
-
-	}
-
-	bool init(const std::string& gotoSceneName)
-	{
-		m_gotoSceneName=gotoSceneName;
-		return true;
-	}
-
-	void menuItemCallback(CCObject* pSender)
-	{
-		GameSceneDirector::getInstance()->pushScene(m_gotoSceneName);
-	}
-
-private:
-
-	std::string m_gotoSceneName;
-
-};
 
 MainController::MainController(void)
 	:m_menuItems(NULL)
@@ -74,17 +50,9 @@ void MainController::layerDidLoad()
 
 void MainController::createTestMenuItem(const std::string& name,const std::string& gotoSceneName)
 {
-	GotoSceneProxy* proxy=new GotoSceneProxy();
-	proxy->init(gotoSceneName);
 
-	CCMenuItemLabel *pItem=CCMenuItemLabel::create(CCLabelTTF::create(name.c_str(), "Arial", 20),
-                                                      proxy, 
-                                                      menu_selector(GotoSceneProxy::menuItemCallback));
+	CCMenuItemLabel *pItem=MenuItemUtil::createTestMenuItemLabel(name,gotoSceneName);
 	m_menuItems->addObject(pItem);
-
-	m_proxys->addObject(proxy);
-
-	proxy->release();
 }
 
 void MainController::menuCloseCallback(CCObject* pSender)

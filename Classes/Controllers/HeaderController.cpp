@@ -9,7 +9,7 @@ NS_CC_UI_BEGIN
 
 HeaderController::HeaderController(void)
 {
-    
+	m_sName="HeaderController";
 }
 
 
@@ -21,31 +21,18 @@ HeaderController::~HeaderController(void)
 void HeaderController::layerDidLoad()
 {
     CCSize contentSize=getPreferredContentSize();
+
+	m_title=CCLabelTTF::create("", "Arial", 20);
     
-    CCMenuItemLabel *startGameItem=CCMenuItemLabel::create(CCLabelTTF::create("user", "Arial", 20),
-                                                      this,
-                                                      menu_selector(HeaderController::showUserInfoCallback));
-    startGameItem->setPosition(ccp(contentSize.width/2,contentSize.height/2));
-    
-    CCMenu* menu=CCMenu::create(startGameItem, NULL);
-    menu->setPosition( CCPointZero );
-    
-    m_layer->addChild(menu);
-    
-//    CCLayerColor* layer1=CCLayerColor::create(ccc4(128, 255, 128, 255), contentSize.width, contentSize.height);
-//    m_layer->addChild(layer1);
-//
-//    CCLayerColor* layer2=CCLayerColor::create(ccc4(128, 255, 255, 255), screenSize.width, 160);
-//    layer2->setPosition(ccp(0.0, -160));
-//    m_layer->addChild(layer2);
-//    
-//    CCLayerColor* layer3=CCLayerColor::create(ccc4(255, 255, 128, 255), screenSize.width, 160);
-//    layer3->setPosition(ccp(0.0, -320));
-//    m_layer->addChild(layer3);
-//    
-//    CCLayerColor* layer4=CCLayerColor::create(ccc4(128, 128, 128, 255), screenSize.width, 160);
-//    layer4->setPosition(ccp(0.0, -480));
-//    m_layer->addChild(layer4);
+    m_title->setPosition(ccp(contentSize.width/2,contentSize.height/2));
+
+    m_layer->addChild(m_title);
+   
+}
+
+void HeaderController::setTitle(const std::string& title)
+{
+	m_title->setString(title.c_str());
 }
 
 void HeaderController::showUserInfoCallback(CCObject* pSender)

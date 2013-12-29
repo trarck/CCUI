@@ -1,4 +1,5 @@
 ﻿#include "TestButtonScene.h"
+#include "Controllers/ThreeSegmentController.h"
 #include "Controllers/TestButtonController.h"
 
 USING_NS_CC;
@@ -8,10 +9,14 @@ NS_CC_UI_BEGIN
 // on "init" you need to initialize your instance
 void TestButtonScene::loadContents()
 {
+	ThreeSegmentScene::loadContents();
+    
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+
 	TestButtonController* testButtonController=new TestButtonController();
 	testButtonController->init();
     
-	this->addChild(testButtonController->getLayer());
+	threeSegmentController->getBodyLayer()->addChild(testButtonController->getLayer());
     addLayerController(testButtonController);
     testButtonController->release();
     

@@ -23,10 +23,22 @@ public:
 	~TestDocumentOrgnaizerController(void);
 
 	void layerDidLoad();
-
-    void testPerformanceCallback(CCObject* pSender);
-    void testZOrderCallback(CCObject* pSender);
 };
+
+class TestDocumentOrgnaizerPerformanceController:public yhmvc::LayerController
+{
+public:
+
+	void layerDidLoad();
+};
+
+class TestDocumentOrgnaizerZOrderController:public yhmvc::LayerController
+{
+public:
+
+	void layerDidLoad();
+};
+
 NS_CC_UI_END
 
 #endif //CCUI_CONTROLLERS_TESTDOCUMENTORGNAIZERCONTROLLER_H_

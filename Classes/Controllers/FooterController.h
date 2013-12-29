@@ -16,11 +16,22 @@ public:
 
 	void layerDidLoad();
 
-	void homeCallback(CCObject* pSender);
+	void backCallback(CCObject* pSender);
     
-    void battleCallback(CCObject* pSender);
-    
-    void helpCallback(CCObject* pSender);
+    void exitCallback(CCObject* pSender);
+
+	void showBackButton(){
+		m_backButton->setVisible(true);
+	}
+
+	void hideBackButton(){
+		m_backButton->setVisible(false);
+	}
+
+private:
+
+	CCMenuItemLabel* m_backButton;
+
 };
 NS_CC_UI_END
 

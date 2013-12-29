@@ -1,11 +1,11 @@
 #ifndef CCUI_SCENES_TESTBUTTONSCENE_H_
 #define CCUI_SCENES_TESTBUTTONSCENE_H_
 
-#include "BaseScene.h"
+#include "ThreeSegmentScene.h"
 
 NS_CC_UI_BEGIN
 
-class TestButtonScene : public BaseScene
+class TestButtonScene : public ThreeSegmentScene
 {
 public:
 

@@ -17,6 +17,11 @@ public:
 	void layerDidLoad();
 
 	void showUserInfoCallback(CCObject* pSender);
+
+	void setTitle(const std::string& title);
+
+private:
+	CCLabelTTF* m_title;
 };
 NS_CC_UI_END
 

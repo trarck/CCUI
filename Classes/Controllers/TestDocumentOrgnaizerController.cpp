@@ -6,6 +6,9 @@
 #include "yhmvc/Core/Layer.h"
 #include "Scenes/GameSceneDirector.h"
 #include "Tests/Box.h"
+#include "Tests/MenuItemUtil.h"
+#include "HeaderController.h"
+
 
 USING_NS_CC;
 USING_NS_CC_YHGE;
@@ -27,32 +30,32 @@ TestDocumentOrgnaizerController::~TestDocumentOrgnaizerController(void)
 
 void TestDocumentOrgnaizerController::layerDidLoad()
 {
-    CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-    CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
+    
 
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
+	CCArray* items=CCArray::create();
 
-    // add a "close" icon to exit the progress. it's an autorelease object
-    
-    CCMenuItemLabel* pTestPerformance=CCMenuItemLabel::create(CCLabelTTF::create("test performens", "Arial", 24), this,menu_selector(TestDocumentOrgnaizerController::testPerformanceCallback));
-    pTestPerformance->setPosition(ccp(110,20));
-    
-    CCMenuItemLabel* pTestZOrder=CCMenuItemLabel::create(CCLabelTTF::create("test zorder", "Arial", 24), this,menu_selector(TestDocumentOrgnaizerController::testZOrderCallback));
-    pTestZOrder->setPosition(ccp(300,20));
-    
+	items->addObject(MenuItemUtil::createTestMenuItemLabel("test performens",kTestDocumentOrgnaizerPerformanceScene));
+	items->addObject(MenuItemUtil::createTestMenuItemLabel("test zorder",kTestDocumentOrgnaizerZOrderScene));
+   
+	CCSize contentSize=getPreferredContentSize();
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(pTestPerformance,pTestZOrder,NULL);
-    pMenu->setPosition(CCPointZero);
-    m_layer->addChild(pMenu, 1);
+	CCMenu* pMenu = CCMenu::createWithArray(items);
+    pMenu->setPosition(ccp(contentSize.width/2,0));
+	pMenu->alignItemsVertically();
+    m_layer->addChild(pMenu);
 
 }
 
-
-void TestDocumentOrgnaizerController::testPerformanceCallback(CCObject* pSender)
+void TestDocumentOrgnaizerPerformanceController::layerDidLoad()
 {
-    DocumentTreeOrganizer* treeOrganizer=new DocumentTreeOrganizer();
+	yhmvc::Scene* scene=GameSceneDirector::getInstance()->getRunningScene();
+	HeaderController* headerController=static_cast<HeaderController*>(scene->getLayerControllerByName("HeaderController"));
+	if (headerController)
+	{
+		headerController->setTitle("test document orgnaizer performance");
+	}
+
+	 DocumentTreeOrganizer* treeOrganizer=new DocumentTreeOrganizer();
     
     //IndependentDocumentTreeOrganizer* treeOrganizer=new IndependentDocumentTreeOrganizer();
     
@@ -100,9 +103,17 @@ void TestDocumentOrgnaizerController::testPerformanceCallback(CCObject* pSender)
     }
 }
 
-void TestDocumentOrgnaizerController::testZOrderCallback(CCObject* pSender)
+
+void TestDocumentOrgnaizerZOrderController::layerDidLoad()
 {
-    DocumentTreeOrganizer* treeOrganizer=new DocumentTreeOrganizer();
+	yhmvc::Scene* scene=GameSceneDirector::getInstance()->getRunningScene();
+	HeaderController* headerController=static_cast<HeaderController*>(scene->getLayerControllerByName("HeaderController"));
+	if (headerController)
+	{
+		headerController->setTitle("test document orgnaizer zorder");
+	}
+
+	DocumentTreeOrganizer* treeOrganizer=new DocumentTreeOrganizer();
     treeOrganizer->init();
     treeOrganizer->registerWithTouchDispatcher();
     
@@ -144,5 +155,4 @@ void TestDocumentOrgnaizerController::testZOrderCallback(CCObject* pSender)
     
     root->addChild(child3);
 }
-
 NS_CC_UI_END

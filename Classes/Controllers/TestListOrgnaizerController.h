@@ -23,10 +23,21 @@ public:
 	~TestListOrgnaizerController(void);
 
 	void layerDidLoad();
-
-    void testPerformanceCallback(CCObject* pSender);
-    void testZOrderCallback(CCObject* pSender);
 };
+
+class TestListOrgnaizerPerformanceController:public yhmvc::LayerController
+{
+public:
+	void layerDidLoad();
+};
+
+class TestListOrgnaizerZOrderController:public yhmvc::LayerController
+{
+public:
+
+	void layerDidLoad();
+};
+
 NS_CC_UI_END
 
 #endif //CCUI_CONTROLLERS_ONECONTROLLER_H_
