@@ -197,6 +197,9 @@
     <ClInclude Include="..\Classes\Tests\MenuItemUtil.h">
       <Filter>Classes\Tests</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\Messages.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Libs\Jsoncpp\src\lib_json\json_internalarray.inl">

@@ -161,6 +161,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClInclude Include="..\Classes\Controllers\ThreeSegmentController.h" />
     <ClInclude Include="..\Classes\Game.h" />
     <ClInclude Include="..\Classes\CCUIMacros.h" />
+    <ClInclude Include="..\Classes\Messages.h" />
     <ClInclude Include="..\Classes\Scenes\BaseScene.h" />
     <ClInclude Include="..\Classes\Scenes\GameSceneDirector.h" />
     <ClInclude Include="..\Classes\Scenes\MainScene.h" />

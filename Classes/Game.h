@@ -20,7 +20,10 @@ public:
     
     
     static Game* getInstance();
-    
+
+    /**
+	 * 设置场景管理
+	 */
     void setupSceneDirector();
 };
 
