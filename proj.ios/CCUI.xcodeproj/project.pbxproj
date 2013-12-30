@@ -89,6 +89,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		574DAA77187121D4001D5E9B /* libyhmvc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 577A7A1F186D8CB300F1B5D5 /* libyhmvc.a */; };
 		57511EBE18618ED000791017 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57511EBC18618ED000791017 /* Box.cpp */; };
+		57549A8B1871801200D88296 /* TestCCBBuilderScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57549A891871801200D88296 /* TestCCBBuilderScene.cpp */; };
+		57549A8E1871809900D88296 /* TestCCBBuilderController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57549A8C1871809900D88296 /* TestCCBBuilderController.cpp */; };
 		577A7810186BF43300F1B5D5 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 577A7809186BF43300F1B5D5 /* json_internalarray.inl */; };
 		577A7811186BF43300F1B5D5 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 577A780A186BF43300F1B5D5 /* json_internalmap.inl */; };
 		577A7812186BF43300F1B5D5 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 577A780B186BF43300F1B5D5 /* json_reader.cpp */; };
@@ -340,6 +342,10 @@
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		57511EBC18618ED000791017 /* Box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box.cpp; sourceTree = "<group>"; };
 		57511EBD18618ED000791017 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		57549A891871801200D88296 /* TestCCBBuilderScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestCCBBuilderScene.cpp; sourceTree = "<group>"; };
+		57549A8A1871801200D88296 /* TestCCBBuilderScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCCBBuilderScene.h; sourceTree = "<group>"; };
+		57549A8C1871809900D88296 /* TestCCBBuilderController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestCCBBuilderController.cpp; sourceTree = "<group>"; };
+		57549A8D1871809900D88296 /* TestCCBBuilderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCCBBuilderController.h; sourceTree = "<group>"; };
 		577A77FE186BF43300F1B5D5 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		577A77FF186BF43300F1B5D5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		577A7800186BF43300F1B5D5 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -938,6 +944,8 @@
 				577A7A391871180700F1B5D5 /* MainController.h */,
 				577A7A3A1871180700F1B5D5 /* TestButtonController.cpp */,
 				577A7A3B1871180700F1B5D5 /* TestButtonController.h */,
+				57549A8C1871809900D88296 /* TestCCBBuilderController.cpp */,
+				57549A8D1871809900D88296 /* TestCCBBuilderController.h */,
 				577A7A3C1871180700F1B5D5 /* TestDocumentOrgnaizerController.cpp */,
 				577A7A3D1871180700F1B5D5 /* TestDocumentOrgnaizerController.h */,
 				577A7A3E1871180700F1B5D5 /* TestListOrgnaizerController.cpp */,
@@ -962,6 +970,8 @@
 				577A7A4A1871180700F1B5D5 /* SceneRegisterData.h */,
 				577A7A4B1871180700F1B5D5 /* TestButtonScene.cpp */,
 				577A7A4C1871180700F1B5D5 /* TestButtonScene.h */,
+				57549A891871801200D88296 /* TestCCBBuilderScene.cpp */,
+				57549A8A1871801200D88296 /* TestCCBBuilderScene.h */,
 				577A7A4D1871180700F1B5D5 /* TestDocumentOrgnaizerScene.cpp */,
 				577A7A4E1871180700F1B5D5 /* TestDocumentOrgnaizerScene.h */,
 				577A7A4F1871180700F1B5D5 /* TestListOrgnaizerScene.cpp */,
@@ -1187,6 +1197,7 @@
 				577A7A5D1871180700F1B5D5 /* TestButtonScene.cpp in Sources */,
 				1A8F3B6E175E05DA00049216 /* Animation.cpp in Sources */,
 				577A7A651871181300F1B5D5 /* Game.cpp in Sources */,
+				57549A8E1871809900D88296 /* TestCCBBuilderController.cpp in Sources */,
 				1A8F3B6F175E05DA00049216 /* AnimationState.cpp in Sources */,
 				1A8F3B70175E05DA00049216 /* AnimationStateData.cpp in Sources */,
 				1A8F3B71175E05DA00049216 /* Atlas.cpp in Sources */,
@@ -1211,6 +1222,7 @@
 				1A8F3B82175E05DA00049216 /* spine-cocos2dx.cpp in Sources */,
 				1AB87035175E0A84005D39BF /* WebSocket.cpp in Sources */,
 				577A7A5A1871180700F1B5D5 /* BaseScene.cpp in Sources */,
+				57549A8B1871801200D88296 /* TestCCBBuilderScene.cpp in Sources */,
 				1A9CE8781765A12C000E3062 /* AssetsManager.cpp in Sources */,
 				577A79CA186D342B00F1B5D5 /* CDAudioManager.m in Sources */,
 			);
