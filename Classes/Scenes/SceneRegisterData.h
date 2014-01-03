@@ -24,6 +24,7 @@ typedef struct SceneRegisterItem
 #include "Scenes/TestButtonScene.h"
 #include "Scenes/TestDocumentOrgnaizerScene.h"
 #include "Scenes/TestListOrgnaizerScene.h"
+#include "Scenes/TestLabelScene.h"
 
 NS_CC_UI_BEGIN
 
@@ -37,6 +38,7 @@ static SceneRegisterItem kSceneRegisterData[]=
 	{kTestListOrgnaizerScene,SCENE_CREATE_SELECTOR(TestListOrgnaizerScene::create)},
 	{kTestListOrgnaizerPerformanceScene,SCENE_CREATE_SELECTOR(TestListOrgnaizerPerformanceScene::create)},
 	{kTestListOrgnaizerZOrderScene,SCENE_CREATE_SELECTOR(TestListOrgnaizerZOrderScene::create)},
+    {kTestLabelScene,SCENE_CREATE_SELECTOR(TestLabelScene::create)},
 };
 
 NS_CC_UI_END

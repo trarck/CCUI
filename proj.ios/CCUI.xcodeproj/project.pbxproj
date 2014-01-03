@@ -91,6 +91,8 @@
 		57511EBE18618ED000791017 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57511EBC18618ED000791017 /* Box.cpp */; };
 		57549A8B1871801200D88296 /* TestCCBBuilderScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57549A891871801200D88296 /* TestCCBBuilderScene.cpp */; };
 		57549A8E1871809900D88296 /* TestCCBBuilderController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57549A8C1871809900D88296 /* TestCCBBuilderController.cpp */; };
+		57644BD1187539AC006B63CF /* TestLabelScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57644BCF187539AC006B63CF /* TestLabelScene.cpp */; };
+		57644BD7187539E9006B63CF /* TestLabelController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57644BD5187539E9006B63CF /* TestLabelController.cpp */; };
 		577A7810186BF43300F1B5D5 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 577A7809186BF43300F1B5D5 /* json_internalarray.inl */; };
 		577A7811186BF43300F1B5D5 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 577A780A186BF43300F1B5D5 /* json_internalmap.inl */; };
 		577A7812186BF43300F1B5D5 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 577A780B186BF43300F1B5D5 /* json_reader.cpp */; };
@@ -346,6 +348,10 @@
 		57549A8A1871801200D88296 /* TestCCBBuilderScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCCBBuilderScene.h; sourceTree = "<group>"; };
 		57549A8C1871809900D88296 /* TestCCBBuilderController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestCCBBuilderController.cpp; sourceTree = "<group>"; };
 		57549A8D1871809900D88296 /* TestCCBBuilderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCCBBuilderController.h; sourceTree = "<group>"; };
+		57644BCF187539AC006B63CF /* TestLabelScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLabelScene.cpp; sourceTree = "<group>"; };
+		57644BD0187539AC006B63CF /* TestLabelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLabelScene.h; sourceTree = "<group>"; };
+		57644BD5187539E9006B63CF /* TestLabelController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLabelController.cpp; sourceTree = "<group>"; };
+		57644BD6187539E9006B63CF /* TestLabelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLabelController.h; sourceTree = "<group>"; };
 		577A77FE186BF43300F1B5D5 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		577A77FF186BF43300F1B5D5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		577A7800186BF43300F1B5D5 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -948,6 +954,8 @@
 				57549A8D1871809900D88296 /* TestCCBBuilderController.h */,
 				577A7A3C1871180700F1B5D5 /* TestDocumentOrgnaizerController.cpp */,
 				577A7A3D1871180700F1B5D5 /* TestDocumentOrgnaizerController.h */,
+				57644BD5187539E9006B63CF /* TestLabelController.cpp */,
+				57644BD6187539E9006B63CF /* TestLabelController.h */,
 				577A7A3E1871180700F1B5D5 /* TestListOrgnaizerController.cpp */,
 				577A7A3F1871180700F1B5D5 /* TestListOrgnaizerController.h */,
 				577A7A401871180700F1B5D5 /* ThreeSegmentController.cpp */,
@@ -974,6 +982,8 @@
 				57549A8A1871801200D88296 /* TestCCBBuilderScene.h */,
 				577A7A4D1871180700F1B5D5 /* TestDocumentOrgnaizerScene.cpp */,
 				577A7A4E1871180700F1B5D5 /* TestDocumentOrgnaizerScene.h */,
+				57644BCF187539AC006B63CF /* TestLabelScene.cpp */,
+				57644BD0187539AC006B63CF /* TestLabelScene.h */,
 				577A7A4F1871180700F1B5D5 /* TestListOrgnaizerScene.cpp */,
 				577A7A501871180700F1B5D5 /* TestListOrgnaizerScene.h */,
 				577A7A511871180700F1B5D5 /* ThreeSegmentScene.cpp */,
@@ -1175,11 +1185,13 @@
 				15A3DA531682F826002FB0C5 /* CCInvocation.cpp in Sources */,
 				577A7A571871180700F1B5D5 /* TestDocumentOrgnaizerController.cpp in Sources */,
 				15A3DA541682F826002FB0C5 /* CCScale9Sprite.cpp in Sources */,
+				57644BD7187539E9006B63CF /* TestLabelController.cpp in Sources */,
 				15A3DA551682F826002FB0C5 /* CCEditBox.cpp in Sources */,
 				15A3DA571682F826002FB0C5 /* CCEditBoxImplIOS.mm in Sources */,
 				577A79CD186D342B00F1B5D5 /* SimpleAudioEngine.mm in Sources */,
 				15A3DA591682F826002FB0C5 /* CCScrollView.cpp in Sources */,
 				15A3DA5A1682F826002FB0C5 /* CCSorting.cpp in Sources */,
+				57644BD1187539AC006B63CF /* TestLabelScene.cpp in Sources */,
 				15A3DA5B1682F826002FB0C5 /* CCTableView.cpp in Sources */,
 				15A3DA5C1682F826002FB0C5 /* CCTableViewCell.cpp in Sources */,
 				15A3DA5D1682F826002FB0C5 /* HttpClient.cpp in Sources */,
