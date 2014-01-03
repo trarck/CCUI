@@ -43,7 +43,7 @@ void TestButtonController::layerDidLoad()
     
     treeOrganizer->setDocument(document);
     
-    
+    //文字按钮
     NormalButton* button=new NormalButton();
     button->init();
     button->setPosition(ccp(visibleSize.width/2,visibleSize.height/2));
@@ -67,6 +67,7 @@ void TestButtonController::layerDidLoad()
     document->addChild(button);
     button->release();
     
+    //点击事件
     NormalButton* backBtn=new NormalButton();
     backBtn->init();
     backBtn->setPosition(ccp(visibleSize.width/2,visibleSize.height/2-100));
@@ -79,7 +80,24 @@ void TestButtonController::layerDidLoad()
     backBtn->changeState(NormalButton::kNormal);
     document->addChild(backBtn);
     backBtn->release();
+    
+    
+    NormalButton* testBtn3=NormalButton::create();
+    testBtn3->setPosition(ccp(visibleSize.width/2,visibleSize.height/2-200));
+    
+    CCLabelTTF* testLabel3=CCLabelTTF::create("back", "Arial", 24);
+    testLabel3->setPosition(ccp(0, 3));
+    
+    testBtn3->setLabel(testLabel3);
 
+    testBtn3->setStateBackground(NormalButton::kNormal, "buttons/btn-test-0.png");
+    testBtn3->setStateBackground(NormalButton::kPressed, "buttons/btn-test-1.png");
+    testBtn3->setStateBackground(NormalButton::kDisabled, "buttons/btn-test-2.png");
+    testBtn3->changeState(NormalButton::kNormal);
+    
+    document->addChild(testBtn3);
+    
+    
 }
 
 
