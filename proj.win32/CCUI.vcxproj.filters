@@ -102,6 +102,12 @@
     <ClCompile Include="..\Classes\Tests\MenuItemUtil.cpp">
       <Filter>Classes\Tests</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Controllers\TestLabelController.cpp">
+      <Filter>Classes\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scenes\TestLabelScene.cpp">
+      <Filter>Classes\Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -199,6 +205,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Messages.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Controllers\TestLabelController.h">
+      <Filter>Classes\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scenes\TestLabelScene.h">
+      <Filter>Classes\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
