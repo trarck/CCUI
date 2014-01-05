@@ -46,7 +46,7 @@ void TestButtonController::layerDidLoad()
     //文字按钮
     NormalButton* button=new NormalButton();
     button->init();
-    button->setPosition(ccp(visibleSize.width/2,visibleSize.height/2));
+    button->setPosition(ccp(visibleSize.width/2,0));
     
     CCLabelTTF* labelTTF=CCLabelTTF::create("click me", "Arial", 24);
     
@@ -70,7 +70,7 @@ void TestButtonController::layerDidLoad()
     //点击事件
     NormalButton* backBtn=new NormalButton();
     backBtn->init();
-    backBtn->setPosition(ccp(visibleSize.width/2,visibleSize.height/2-100));
+    backBtn->setPosition(ccp(visibleSize.width/2,100));
     
     CCLabelTTF* backLabel=CCLabelTTF::create("back", "Arial", 24);
     
@@ -83,21 +83,48 @@ void TestButtonController::layerDidLoad()
     
     
     NormalButton* testBtn3=NormalButton::create();
-    testBtn3->setPosition(ccp(visibleSize.width/2,visibleSize.height/2-200));
+    testBtn3->setPosition(ccp(visibleSize.width/2,200));
     
     CCLabelTTF* testLabel3=CCLabelTTF::create("back", "Arial", 24);
     testLabel3->setPosition(ccp(0, 3));
     
     testBtn3->setLabel(testLabel3);
 
+	ccColor3B pressColor3=ccc3(140, 140, 140);
+    testBtn3->setStateLabelColor(NormalButton::kPressed, pressColor3);
+
     testBtn3->setStateBackground(NormalButton::kNormal, "buttons/btn-test-0.png");
     testBtn3->setStateBackground(NormalButton::kPressed, "buttons/btn-test-1.png");
     testBtn3->setStateBackground(NormalButton::kDisabled, "buttons/btn-test-2.png");
     testBtn3->changeState(NormalButton::kNormal);
-    
     document->addChild(testBtn3);
     
+	NormalButton* testBtn4=NormalButton::create();
+    testBtn4->setPosition(ccp(visibleSize.width/2,300));
+    testBtn4->setStateBackground(NormalButton::kNormal, "buttons/btn-a-0.png");
+    testBtn4->setStateBackground(NormalButton::kPressed, "buttons/btn-a-1.png");
+    testBtn4->setStateBackground(NormalButton::kDisabled, "buttons/btn-a-2.png");
+    testBtn4->changeState(NormalButton::kNormal);
+    document->addChild(testBtn4);
+
+	NormalButton* testBtn5=NormalButton::create();
+    testBtn5->setPosition(ccp(visibleSize.width/2,400));
+	testBtn5->setAnchorPoint(ccp(0.5,0.5));
     
+	CCLabelBMFont* testLabel5=CCLabelBMFont::create("bmfont","fonts/boundsTestFont.fnt");
+    testLabel5->setPosition(ccp(0, -6));
+    
+	testBtn5->setLabel(testLabel5);
+	testBtn5->setLabelType(NormalButton::kLabelTypeBMFont);
+
+    testBtn5->setStateLabelColor(NormalButton::kPressed, pressColor3);
+
+    testBtn5->setStateBackground(NormalButton::kNormal, "buttons/btn-test-0.png");
+    testBtn5->setStateBackground(NormalButton::kPressed, "buttons/btn-test-1.png");
+    testBtn5->setStateBackground(NormalButton::kDisabled, "buttons/btn-test-2.png");
+    testBtn5->changeState(NormalButton::kNormal);
+    document->addChild(testBtn5);
+
 }
 
 
