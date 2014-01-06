@@ -94,6 +94,7 @@
 		57644BD1187539AC006B63CF /* TestLabelScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57644BCF187539AC006B63CF /* TestLabelScene.cpp */; };
 		57644BD7187539E9006B63CF /* TestLabelController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57644BD5187539E9006B63CF /* TestLabelController.cpp */; };
 		57644BE31876BF0B006B63CF /* buttons in Resources */ = {isa = PBXBuildFile; fileRef = 57644BE21876BF0B006B63CF /* buttons */; };
+		57644BE5187A4CA4006B63CF /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 57644BE4187A4CA4006B63CF /* fonts */; };
 		577A7810186BF43300F1B5D5 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 577A7809186BF43300F1B5D5 /* json_internalarray.inl */; };
 		577A7811186BF43300F1B5D5 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 577A780A186BF43300F1B5D5 /* json_internalmap.inl */; };
 		577A7812186BF43300F1B5D5 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 577A780B186BF43300F1B5D5 /* json_reader.cpp */; };
@@ -354,6 +355,7 @@
 		57644BD5187539E9006B63CF /* TestLabelController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLabelController.cpp; sourceTree = "<group>"; };
 		57644BD6187539E9006B63CF /* TestLabelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLabelController.h; sourceTree = "<group>"; };
 		57644BE21876BF0B006B63CF /* buttons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buttons; sourceTree = "<group>"; };
+		57644BE4187A4CA4006B63CF /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		577A77FE186BF43300F1B5D5 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		577A77FF186BF43300F1B5D5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		577A7800186BF43300F1B5D5 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -998,6 +1000,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				57644BE4187A4CA4006B63CF /* fonts */,
 				57644BE21876BF0B006B63CF /* buttons */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -1131,6 +1134,7 @@
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
+				57644BE5187A4CA4006B63CF /* fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
