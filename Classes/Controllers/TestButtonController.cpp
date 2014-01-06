@@ -25,7 +25,7 @@ TestButtonController::~TestButtonController(void)
 
 void TestButtonController::layerDidLoad()
 {
-     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
+    CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
 
     /////////////////////////////

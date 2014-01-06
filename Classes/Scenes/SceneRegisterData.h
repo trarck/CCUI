@@ -22,6 +22,7 @@ typedef struct SceneRegisterItem
 #include "SceneDefine.h"
 #include "Scenes/MainScene.h"
 #include "Scenes/TestButtonScene.h"
+#include "Scenes/TestComplexButtonScene.h"
 #include "Scenes/TestDocumentOrgnaizerScene.h"
 #include "Scenes/TestListOrgnaizerScene.h"
 #include "Scenes/TestLabelScene.h"
@@ -32,6 +33,7 @@ static SceneRegisterItem kSceneRegisterData[]=
 {
     {kMainScene,SCENE_CREATE_SELECTOR(MainScene::create)},
 	{kTestButtonScene,SCENE_CREATE_SELECTOR(TestButtonScene::create)},
+    {kTestComplexButtonScene,SCENE_CREATE_SELECTOR(TestComplexButtonScene::create)},
 	{kTestDocumentOrgnaizerScene,SCENE_CREATE_SELECTOR(TestDocumentOrgnaizerScene::create)},
 	{kTestDocumentOrgnaizerPerformanceScene,SCENE_CREATE_SELECTOR(TestDocumentOrgnaizerPerformanceScene::create)},
 	{kTestDocumentOrgnaizerZOrderScene,SCENE_CREATE_SELECTOR(TestDocumentOrgnaizerZOrderScene::create)},

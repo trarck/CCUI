@@ -13,6 +13,7 @@
 
 static const char* kMainScene="main";
 static const char* kTestButtonScene="TestButton";
+static const char* kTestComplexButtonScene="TestComplexButton";
 static const char* kTestDocumentOrgnaizerScene="TestDocumentOrgnaizer";
 static const char* kTestDocumentOrgnaizerPerformanceScene="TestDocumentOrgnaizerPerformance";
 static const char* kTestDocumentOrgnaizerZOrderScene="TestDocumentOrgnaizerZOrder";

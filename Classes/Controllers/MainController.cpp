@@ -32,6 +32,7 @@ void MainController::layerDidLoad()
 	m_proxys->init();
 
 	createTestMenuItem("test button",kTestButtonScene);
+    createTestMenuItem("test complex button",kTestComplexButtonScene);
     createTestMenuItem("test label",kTestLabelScene);
 	createTestMenuItem("test document orgnaizer",kTestDocumentOrgnaizerScene);
 	createTestMenuItem("test list orgnaizer",kTestListOrgnaizerScene);
