@@ -127,6 +127,9 @@ void TestButtonController::layerDidLoad()
     testBtn5->setStateBackground(NormalButton::kPressed, "buttons/btn-test-1.png");
     testBtn5->setStateBackground(NormalButton::kDisabled, "buttons/btn-test-2.png");
     testBtn5->changeState(NormalButton::kNormal);
+
+    testBtn5->setTouchDownZoomable(true);
+    
     document->addChild(testBtn5);
 
 }
