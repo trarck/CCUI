@@ -86,10 +86,12 @@ void TestButtonController::layerDidLoad()
     testBtn3->setPosition(ccp(visibleSize.width/2,200));
     
     CCLabelTTF* testLabel3=CCLabelTTF::create("back", "Arial", 24);
-    testLabel3->setPosition(ccp(0, 3));
+//    testLabel3->setPosition(ccp(0, 3));
     
     testBtn3->setLabel(testLabel3);
 
+    testBtn3->setLabelOffset(ccp(0,3));
+    
 	ccColor3B pressColor3=ccc3(140, 140, 140);
     testBtn3->setStateLabelColor(NormalButton::kPressed, pressColor3);
 
@@ -109,13 +111,15 @@ void TestButtonController::layerDidLoad()
 
 	NormalButton* testBtn5=NormalButton::create();
     testBtn5->setPosition(ccp(visibleSize.width/2,400));
-	testBtn5->setAnchorPoint(ccp(0.5,0.5));
+//	testBtn5->setAnchorPoint(ccp(0.5,0.5));
     
 	CCLabelBMFont* testLabel5=CCLabelBMFont::create("bmfont","fonts/boundsTestFont.fnt");
-    testLabel5->setPosition(ccp(0, -6));
+//    testLabel5->setPosition(ccp(0, -6));
     
 	testBtn5->setLabel(testLabel5);
 	testBtn5->setLabelType(NormalButton::kLabelTypeBMFont);
+    
+    testBtn5->setLabelOffset(ccp(0,-6));
 
     testBtn5->setStateLabelColor(NormalButton::kPressed, pressColor3);
 
