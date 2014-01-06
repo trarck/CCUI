@@ -95,6 +95,8 @@
 		57644BD7187539E9006B63CF /* TestLabelController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57644BD5187539E9006B63CF /* TestLabelController.cpp */; };
 		57644BE31876BF0B006B63CF /* buttons in Resources */ = {isa = PBXBuildFile; fileRef = 57644BE21876BF0B006B63CF /* buttons */; };
 		57644BE5187A4CA4006B63CF /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 57644BE4187A4CA4006B63CF /* fonts */; };
+		57644BE8187A9274006B63CF /* TestComplexButtonScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57644BE6187A9274006B63CF /* TestComplexButtonScene.cpp */; };
+		57644BEB187A928C006B63CF /* TestComplexButtonController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57644BE9187A928C006B63CF /* TestComplexButtonController.cpp */; };
 		577A7810186BF43300F1B5D5 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 577A7809186BF43300F1B5D5 /* json_internalarray.inl */; };
 		577A7811186BF43300F1B5D5 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 577A780A186BF43300F1B5D5 /* json_internalmap.inl */; };
 		577A7812186BF43300F1B5D5 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 577A780B186BF43300F1B5D5 /* json_reader.cpp */; };
@@ -356,6 +358,10 @@
 		57644BD6187539E9006B63CF /* TestLabelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLabelController.h; sourceTree = "<group>"; };
 		57644BE21876BF0B006B63CF /* buttons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buttons; sourceTree = "<group>"; };
 		57644BE4187A4CA4006B63CF /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		57644BE6187A9274006B63CF /* TestComplexButtonScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestComplexButtonScene.cpp; sourceTree = "<group>"; };
+		57644BE7187A9274006B63CF /* TestComplexButtonScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestComplexButtonScene.h; sourceTree = "<group>"; };
+		57644BE9187A928C006B63CF /* TestComplexButtonController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestComplexButtonController.cpp; sourceTree = "<group>"; };
+		57644BEA187A928C006B63CF /* TestComplexButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestComplexButtonController.h; sourceTree = "<group>"; };
 		577A77FE186BF43300F1B5D5 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
 		577A77FF186BF43300F1B5D5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		577A7800186BF43300F1B5D5 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
@@ -956,6 +962,8 @@
 				577A7A3B1871180700F1B5D5 /* TestButtonController.h */,
 				57549A8C1871809900D88296 /* TestCCBBuilderController.cpp */,
 				57549A8D1871809900D88296 /* TestCCBBuilderController.h */,
+				57644BE9187A928C006B63CF /* TestComplexButtonController.cpp */,
+				57644BEA187A928C006B63CF /* TestComplexButtonController.h */,
 				577A7A3C1871180700F1B5D5 /* TestDocumentOrgnaizerController.cpp */,
 				577A7A3D1871180700F1B5D5 /* TestDocumentOrgnaizerController.h */,
 				57644BD5187539E9006B63CF /* TestLabelController.cpp */,
@@ -984,6 +992,8 @@
 				577A7A4C1871180700F1B5D5 /* TestButtonScene.h */,
 				57549A891871801200D88296 /* TestCCBBuilderScene.cpp */,
 				57549A8A1871801200D88296 /* TestCCBBuilderScene.h */,
+				57644BE6187A9274006B63CF /* TestComplexButtonScene.cpp */,
+				57644BE7187A9274006B63CF /* TestComplexButtonScene.h */,
 				577A7A4D1871180700F1B5D5 /* TestDocumentOrgnaizerScene.cpp */,
 				577A7A4E1871180700F1B5D5 /* TestDocumentOrgnaizerScene.h */,
 				57644BCF187539AC006B63CF /* TestLabelScene.cpp */,
@@ -1199,6 +1209,7 @@
 				577A79CD186D342B00F1B5D5 /* SimpleAudioEngine.mm in Sources */,
 				15A3DA591682F826002FB0C5 /* CCScrollView.cpp in Sources */,
 				15A3DA5A1682F826002FB0C5 /* CCSorting.cpp in Sources */,
+				57644BEB187A928C006B63CF /* TestComplexButtonController.cpp in Sources */,
 				57644BD1187539AC006B63CF /* TestLabelScene.cpp in Sources */,
 				15A3DA5B1682F826002FB0C5 /* CCTableView.cpp in Sources */,
 				15A3DA5C1682F826002FB0C5 /* CCTableViewCell.cpp in Sources */,
@@ -1211,6 +1222,7 @@
 				577A7A5B1871180700F1B5D5 /* GameSceneDirector.cpp in Sources */,
 				577A7A531871180700F1B5D5 /* FooterController.cpp in Sources */,
 				1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */,
+				57644BE8187A9274006B63CF /* TestComplexButtonScene.cpp in Sources */,
 				1AC3624B16D4A1E8000847F2 /* main.m in Sources */,
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
 				577A7A5F1871180700F1B5D5 /* TestListOrgnaizerScene.cpp in Sources */,
