@@ -1,4 +1,5 @@
 #include "TestButtonController.h"
+#include "cocos-ext.h"
 #include <yhge/Event/EventHandle.h>
 #include "yhgui/yhgui.h"
 #include "yhgui/interactive/DocumentTreeOrganizer.h"
@@ -6,6 +7,7 @@
 #include "Scenes/GameSceneDirector.h"
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 USING_NS_CC_YHGE;
 USING_NS_CC_YHGUI;
 USING_NS_CC_YHMVC;
@@ -26,13 +28,6 @@ TestButtonController::~TestButtonController(void)
 void TestButtonController::layerDidLoad()
 {
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-    CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
-
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-
-    // add a "close" icon to exit the progress. it's an autorelease object
     
     DocumentTreeOrganizer* treeOrganizer=new DocumentTreeOrganizer();
     treeOrganizer->init();
@@ -43,7 +38,7 @@ void TestButtonController::layerDidLoad()
     
     treeOrganizer->setDocument(document);
     
-    //文字按钮
+    //纯文字按钮
     NormalButton* button=new NormalButton();
     button->init();
     button->setPosition(ccp(visibleSize.width/2,0));
@@ -67,70 +62,82 @@ void TestButtonController::layerDidLoad()
     document->addChild(button);
     button->release();
     
-    //点击事件
-    NormalButton* backBtn=new NormalButton();
-    backBtn->init();
-    backBtn->setPosition(ccp(visibleSize.width/2,100));
+    //文字加背景
+    NormalButton* testBtn1=NormalButton::create();
+    testBtn1->setPosition(ccp(visibleSize.width/2,60));
     
-    CCLabelTTF* backLabel=CCLabelTTF::create("back", "Arial", 24);
-    
-    backBtn->setLabel(backLabel);
-    
-    backBtn->addEventListener("touchUpInside", this, YH_EVENT_SELECTOR(TestButtonController::onBack));
-    backBtn->changeState(NormalButton::kNormal);
-    document->addChild(backBtn);
-    backBtn->release();
-    
-    
-    NormalButton* testBtn3=NormalButton::create();
-    testBtn3->setPosition(ccp(visibleSize.width/2,200));
-    
-    CCLabelTTF* testLabel3=CCLabelTTF::create("back", "Arial", 24);
-//    testLabel3->setPosition(ccp(0, 3));
-    
-    testBtn3->setLabel(testLabel3);
-
-    testBtn3->setLabelOffset(ccp(0,3));
+    CCLabelTTF* testLabel1=CCLabelTTF::create("back", "Arial", 24);
+    testBtn1->setLabel(testLabel1);
+    testBtn1->setLabelOffset(ccp(0,3));
     
 	ccColor3B pressColor3=ccc3(140, 140, 140);
-    testBtn3->setStateLabelColor(NormalButton::kPressed, pressColor3);
+    testBtn1->setStateLabelColor(NormalButton::kPressed, pressColor3);
 
-    testBtn3->setStateBackground(NormalButton::kNormal, "buttons/btn-test-0.png");
-    testBtn3->setStateBackground(NormalButton::kPressed, "buttons/btn-test-1.png");
-    testBtn3->setStateBackground(NormalButton::kDisabled, "buttons/btn-test-2.png");
+    testBtn1->setStateBackground(NormalButton::kNormal, "buttons/btn-test-0.png");
+    testBtn1->setStateBackground(NormalButton::kPressed, "buttons/btn-test-1.png");
+    testBtn1->setStateBackground(NormalButton::kDisabled, "buttons/btn-test-2.png");
+    testBtn1->changeState(NormalButton::kNormal);
+    document->addChild(testBtn1);
+    
+    //bmfont 文字加背景
+    NormalButton* testBtn2=NormalButton::create();
+    testBtn2->setPosition(ccp(visibleSize.width/2,120));
+    
+	CCLabelBMFont* testLabel2=CCLabelBMFont::create("bmfont","fonts/boundsTestFont.fnt");
+    
+	testBtn2->setLabel(testLabel2);
+	testBtn2->setLabelType(NormalButton::kLabelTypeBMFont);
+    testBtn2->setLabelOffset(ccp(0,-6));
+    testBtn2->setStateLabelColor(NormalButton::kPressed, pressColor3);
+    
+    testBtn2->setStateBackground(NormalButton::kNormal, "buttons/btn-test-0.png");
+    testBtn2->setStateBackground(NormalButton::kPressed, "buttons/btn-test-1.png");
+    testBtn2->setStateBackground(NormalButton::kDisabled, "buttons/btn-test-2.png");
+    testBtn2->changeState(NormalButton::kNormal);
+    
+    testBtn2->setTouchDownZoomable(true);
+    
+    document->addChild(testBtn2);
+    
+    //纯背景
+	NormalButton* testBtn3=NormalButton::create();
+    testBtn3->setStateBackground(NormalButton::kNormal, "buttons/btn-a-0.png");
+    testBtn3->setStateBackground(NormalButton::kPressed, "buttons/btn-a-1.png");
+    testBtn3->setStateBackground(NormalButton::kDisabled, "buttons/btn-a-2.png");
     testBtn3->changeState(NormalButton::kNormal);
+    testBtn3->setPosition(ccp(visibleSize.width/2,180));
+    testBtn3->setScale(0.5);
     document->addChild(testBtn3);
+
     
-	NormalButton* testBtn4=NormalButton::create();
-    testBtn4->setPosition(ccp(visibleSize.width/2,300));
-    testBtn4->setStateBackground(NormalButton::kNormal, "buttons/btn-a-0.png");
-    testBtn4->setStateBackground(NormalButton::kPressed, "buttons/btn-a-1.png");
-    testBtn4->setStateBackground(NormalButton::kDisabled, "buttons/btn-a-2.png");
+    //9宫格的背景
+    CCSize buttonSize4=CCSizeMake(300, 70);
+    
+    NormalButton* testBtn4=NormalButton::create();
+    
+	CCLabelBMFont* testLabel4=CCLabelBMFont::create("bmfont","fonts/boundsTestFont.fnt");
+	testBtn4->setLabel(testLabel4);
+	testBtn4->setLabelType(NormalButton::kLabelTypeBMFont);
+    testBtn4->setLabelOffset(ccp(0,-6));
+    testBtn4->setStateLabelColor(NormalButton::kPressed, pressColor3);
+    
+    CCScale9Sprite* normalBg4=CCScale9Sprite::create("buttons/btn-test-0.png");
+    normalBg4->setContentSize(buttonSize4);
+    
+    CCScale9Sprite* pressedBg4=CCScale9Sprite::create("buttons/btn-test-1.png");
+    pressedBg4->setContentSize(buttonSize4);
+    
+    testBtn4->setStateBackground(NormalButton::kNormal, normalBg4);
+    testBtn4->setStateBackground(NormalButton::kPressed,pressedBg4);
+
     testBtn4->changeState(NormalButton::kNormal);
+    testBtn4->setTouchDownZoomable(true);
+    
+    testBtn4->setPosition(ccp(visibleSize.width/2,280));
+    testBtn4->setAnchorPoint(ccp(0.5, 0.5));
+    
     document->addChild(testBtn4);
-
-	NormalButton* testBtn5=NormalButton::create();
-    testBtn5->setPosition(ccp(visibleSize.width/2,400));
-//	testBtn5->setAnchorPoint(ccp(0.5,0.5));
-    
-	CCLabelBMFont* testLabel5=CCLabelBMFont::create("bmfont","fonts/boundsTestFont.fnt");
-//    testLabel5->setPosition(ccp(0, -6));
-    
-	testBtn5->setLabel(testLabel5);
-	testBtn5->setLabelType(NormalButton::kLabelTypeBMFont);
-    
-    testBtn5->setLabelOffset(ccp(0,-6));
-
-    testBtn5->setStateLabelColor(NormalButton::kPressed, pressColor3);
-
-    testBtn5->setStateBackground(NormalButton::kNormal, "buttons/btn-test-0.png");
-    testBtn5->setStateBackground(NormalButton::kPressed, "buttons/btn-test-1.png");
-    testBtn5->setStateBackground(NormalButton::kDisabled, "buttons/btn-test-2.png");
-    testBtn5->changeState(NormalButton::kNormal);
-
-    testBtn5->setTouchDownZoomable(true);
-    
-    document->addChild(testBtn5);
+	
 
 }
 
