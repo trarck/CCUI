@@ -3,7 +3,7 @@
 #include "yhgui/yhgui.h"
 #include "yhgui/interactive/ListOrganizer.h"
 #include "yhgui/interactive/OrderedListOrganizer.h"
-#include "yhmvc/Core/Layer.h"
+#include <yhmvc/yhmvc.h>
 #include "Scenes/GameSceneDirector.h"
 #include "Tests/Box.h"
 #include "Tests/MenuItemUtil.h"
@@ -27,7 +27,7 @@ TestListOrgnaizerController::~TestListOrgnaizerController(void)
     CCLOG("TestListOrgnaizerController destroy");
 }
 
-void TestListOrgnaizerController::layerDidLoad()
+void TestListOrgnaizerController::viewDidLoad()
 {
 
 	CCArray* items=CCArray::create();
@@ -41,15 +41,15 @@ void TestListOrgnaizerController::layerDidLoad()
     pMenu->setPosition(ccp(contentSize.width/2,0));
 	pMenu->alignItemsVertically();
 
-    m_layer->addChild(pMenu, 1);
+    m_view->addChild(pMenu, 1);
 
 }
 
 
-void TestListOrgnaizerPerformanceController::layerDidLoad()
+void TestListOrgnaizerPerformanceController::viewDidLoad()
 {
 	yhmvc::Scene* scene=GameSceneDirector::getInstance()->getRunningScene();
-	HeaderController* headerController=static_cast<HeaderController*>(scene->getLayerControllerByName("HeaderController"));
+	HeaderController* headerController=static_cast<HeaderController*>(scene->getControllerByName("HeaderController"));
 	if (headerController)
 	{
 		headerController->setTitle("test list orgnaizer performance");
@@ -60,7 +60,7 @@ void TestListOrgnaizerPerformanceController::layerDidLoad()
     organizer->registerWithTouchDispatcher();
     
     Component* root=Component::create();
-    m_layer->addChild(root);
+    m_view->addChild(root);
     
 
     
@@ -104,10 +104,10 @@ void TestListOrgnaizerPerformanceController::layerDidLoad()
     }
 }
 
-void TestListOrgnaizerZOrderController::layerDidLoad()
+void TestListOrgnaizerZOrderController::viewDidLoad()
 {
 	yhmvc::Scene* scene=GameSceneDirector::getInstance()->getRunningScene();
-	HeaderController* headerController=static_cast<HeaderController*>(scene->getLayerControllerByName("HeaderController"));
+	HeaderController* headerController=static_cast<HeaderController*>(scene->getControllerByName("HeaderController"));
 	if (headerController)
 	{
 		headerController->setTitle("test list orgnaizer zorder");
@@ -118,7 +118,7 @@ void TestListOrgnaizerZOrderController::layerDidLoad()
     organizer->registerWithTouchDispatcher();
     
     Component* root=Component::create();
-    m_layer->addChild(root);
+    m_view->addChild(root);
     
     
     SolidBox* child1=SolidBox::create();

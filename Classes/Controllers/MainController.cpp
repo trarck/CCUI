@@ -1,5 +1,5 @@
 #include "MainController.h"
-#include "yhmvc/Core/Layer.h"
+#include <yhmvc/yhmvc.h>
 #include "Scenes/GameSceneDirector.h"
 #include "Tests/MenuItemUtil.h"
 
@@ -23,7 +23,7 @@ MainController::~MainController(void)
 	CC_SAFE_RELEASE_NULL(m_proxys);
 }
 
-void MainController::layerDidLoad()
+void MainController::viewDidLoad()
 {
 	m_menuItems=new CCArray();
 	m_menuItems->init();
@@ -36,6 +36,7 @@ void MainController::layerDidLoad()
     createTestMenuItem("test label",kTestLabelScene);
 	createTestMenuItem("test document orgnaizer",kTestDocumentOrgnaizerScene);
 	createTestMenuItem("test list orgnaizer",kTestListOrgnaizerScene);
+    createTestMenuItem("test ui builder",kTestUIBuilderScene);
 
 	CCSize screenSize=CCDirector::sharedDirector()->getWinSize();
 
@@ -43,7 +44,7 @@ void MainController::layerDidLoad()
     CCMenu* pMenu = CCMenu::createWithArray(m_menuItems);
 	pMenu->setPosition( ccp(screenSize.width/2,0) );
 	pMenu->alignItemsVertically();
-    m_layer->addChild(pMenu, 1);
+    m_view->addChild(pMenu, 1);
 
     /////////////////////////////
     // 3. add your codes below...
@@ -59,7 +60,7 @@ void MainController::createTestMenuItem(const std::string& name,const std::strin
 
 void MainController::menuCloseCallback(CCObject* pSender)
 {
-    m_layer->removeAllChildrenWithCleanup(true);
+    m_view->removeAllChildrenWithCleanup(true);
     CCDirector::sharedDirector()->end();
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)

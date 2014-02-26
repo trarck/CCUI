@@ -1,5 +1,5 @@
-#ifndef CCUI_CONTROLLERS_TESTLABELCONTROLLER_H_
-#define CCUI_CONTROLLERS_TESTLABELCONTROLLER_H_
+#ifndef CCUI_CONTROLLERS_TESTUIBUILDERCONTROLLER_H_
+#define CCUI_CONTROLLERS_TESTUIBUILDERCONTROLLER_H_
 
 #include <yhge/Event/Event.h>
 #include <yhmvc/yhmvc.h>
@@ -13,17 +13,17 @@ NS_CC_UI_BEGIN
  * 可以添加其它controller来作为显示内容
  * 由于结构简单不容易出错。
  */
-class TestLabelController:public yhmvc::Controller
+class TestUIBuilderController:public yhmvc::Controller
 {
 public:
 	
-    TestLabelController(void);
+    TestUIBuilderController(void);
     
-	~TestLabelController(void);
+	~TestUIBuilderController(void);
 
 	void viewDidLoad();
-
 };
+
 NS_CC_UI_END
 
-#endif //CCUI_CONTROLLERS_TESTLABELCONTROLLER_H_
+#endif //CCUI_CONTROLLERS_TESTUIBUILDERCONTROLLER_H_

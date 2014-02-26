@@ -2,8 +2,7 @@
 #define CCUI_CONTROLLERS_TESTDOCUMENTORGNAIZERCONTROLLER_H_
 
 #include <yhge/Event/Event.h>
-#include "yhmvc/Core/LayerController.h"
-#include "yhmvc/Core/Layer.h"
+#include <yhmvc/yhmvc.h>
 #include "CCUIMacros.h"
 
 NS_CC_UI_BEGIN
@@ -14,7 +13,7 @@ NS_CC_UI_BEGIN
  * 可以添加其它controller来作为显示内容
  * 由于结构简单不容易出错。
  */
-class TestDocumentOrgnaizerController:public yhmvc::LayerController
+class TestDocumentOrgnaizerController:public yhmvc::Controller
 {
 public:
 	
@@ -22,21 +21,21 @@ public:
     
 	~TestDocumentOrgnaizerController(void);
 
-	void layerDidLoad();
+	void viewDidLoad();
 };
 
-class TestDocumentOrgnaizerPerformanceController:public yhmvc::LayerController
+class TestDocumentOrgnaizerPerformanceController:public yhmvc::Controller
 {
 public:
 
-	void layerDidLoad();
+	void viewDidLoad();
 };
 
-class TestDocumentOrgnaizerZOrderController:public yhmvc::LayerController
+class TestDocumentOrgnaizerZOrderController:public yhmvc::Controller
 {
 public:
 
-	void layerDidLoad();
+	void viewDidLoad();
 };
 
 NS_CC_UI_END

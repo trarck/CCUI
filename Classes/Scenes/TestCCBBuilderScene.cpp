@@ -11,14 +11,14 @@ void TestCCBBuilderScene::loadContents()
 {
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestCCBBuilderController* testCCBBuilderController=new TestCCBBuilderController();
 	testCCBBuilderController->init();
     testCCBBuilderController->setPreferredContentSize(threeSegmentController->getBodyLayer()->getContentSize());
     
-	threeSegmentController->getBodyLayer()->addChild(testCCBBuilderController->getLayer());
-    addLayerController(testCCBBuilderController);
+	threeSegmentController->getBodyLayer()->addChild(testCCBBuilderController->getView());
+    addController(testCCBBuilderController);
     testCCBBuilderController->release();
     
 }

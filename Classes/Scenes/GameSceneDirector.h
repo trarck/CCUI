@@ -9,7 +9,7 @@
 #ifndef CCUI_GAMESCENEDIRECTOR_H_
 #define CCUI_GAMESCENEDIRECTOR_H_
 
-#include <yhmvc/Core/SceneDirector.h>
+#include <yhmvc/yhmvc.h>
 #include "CCUIMacros.h"
 #include "SceneDefine.h"
 

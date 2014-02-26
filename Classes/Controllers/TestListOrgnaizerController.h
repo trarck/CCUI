@@ -2,8 +2,7 @@
 #define CCUI_CONTROLLERS_TESTLISTORGNAIZERCONTROLLER_H_
 
 #include <yhge/Event/Event.h>
-#include "yhmvc/Core/LayerController.h"
-#include "yhmvc/Core/Layer.h"
+#include <yhmvc/yhmvc.h>
 #include "CCUIMacros.h"
 
 NS_CC_UI_BEGIN
@@ -14,7 +13,7 @@ NS_CC_UI_BEGIN
  * 可以添加其它controller来作为显示内容
  * 由于结构简单不容易出错。
  */
-class TestListOrgnaizerController:public yhmvc::LayerController
+class TestListOrgnaizerController:public yhmvc::Controller
 {
 public:
 	
@@ -22,20 +21,20 @@ public:
     
 	~TestListOrgnaizerController(void);
 
-	void layerDidLoad();
+	void viewDidLoad();
 };
 
-class TestListOrgnaizerPerformanceController:public yhmvc::LayerController
+class TestListOrgnaizerPerformanceController:public yhmvc::Controller
 {
 public:
-	void layerDidLoad();
+	void viewDidLoad();
 };
 
-class TestListOrgnaizerZOrderController:public yhmvc::LayerController
+class TestListOrgnaizerZOrderController:public yhmvc::Controller
 {
 public:
 
-	void layerDidLoad();
+	void viewDidLoad();
 };
 
 NS_CC_UI_END

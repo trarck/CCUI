@@ -3,7 +3,7 @@
 #include "yhgui/yhgui.h"
 #include "yhgui/interactive/DocumentTreeOrganizer.h"
 #include "yhgui/interactive/IndependentDocumentTreeOrganizer.h"
-#include "yhmvc/Core/Layer.h"
+#include <yhmvc/yhmvc.h>
 #include "Scenes/GameSceneDirector.h"
 #include "Tests/Box.h"
 #include "Tests/MenuItemUtil.h"
@@ -28,7 +28,7 @@ TestDocumentOrgnaizerController::~TestDocumentOrgnaizerController(void)
     CCLOG("TestDocumentOrgnaizerController destroy");
 }
 
-void TestDocumentOrgnaizerController::layerDidLoad()
+void TestDocumentOrgnaizerController::viewDidLoad()
 {
     
 
@@ -42,14 +42,14 @@ void TestDocumentOrgnaizerController::layerDidLoad()
 	CCMenu* pMenu = CCMenu::createWithArray(items);
     pMenu->setPosition(ccp(contentSize.width/2,0));
 	pMenu->alignItemsVertically();
-    m_layer->addChild(pMenu);
+    m_view->addChild(pMenu);
 
 }
 
-void TestDocumentOrgnaizerPerformanceController::layerDidLoad()
+void TestDocumentOrgnaizerPerformanceController::viewDidLoad()
 {
 	yhmvc::Scene* scene=GameSceneDirector::getInstance()->getRunningScene();
-	HeaderController* headerController=static_cast<HeaderController*>(scene->getLayerControllerByName("HeaderController"));
+	HeaderController* headerController=static_cast<HeaderController*>(scene->getControllerByName("HeaderController"));
 	if (headerController)
 	{
 		headerController->setTitle("test document orgnaizer performance");
@@ -63,7 +63,7 @@ void TestDocumentOrgnaizerPerformanceController::layerDidLoad()
     treeOrganizer->registerWithTouchDispatcher();
     
     Component* root=Component::create();
-    m_layer->addChild(root);
+    m_view->addChild(root);
     
     treeOrganizer->setDocument(root);
     
@@ -104,10 +104,10 @@ void TestDocumentOrgnaizerPerformanceController::layerDidLoad()
 }
 
 
-void TestDocumentOrgnaizerZOrderController::layerDidLoad()
+void TestDocumentOrgnaizerZOrderController::viewDidLoad()
 {
 	yhmvc::Scene* scene=GameSceneDirector::getInstance()->getRunningScene();
-	HeaderController* headerController=static_cast<HeaderController*>(scene->getLayerControllerByName("HeaderController"));
+	HeaderController* headerController=static_cast<HeaderController*>(scene->getControllerByName("HeaderController"));
 	if (headerController)
 	{
 		headerController->setTitle("test document orgnaizer zorder");
@@ -118,7 +118,7 @@ void TestDocumentOrgnaizerZOrderController::layerDidLoad()
     treeOrganizer->registerWithTouchDispatcher();
     
     Component* root=Component::create();
-    m_layer->addChild(root);
+    m_view->addChild(root);
     
     treeOrganizer->setDocument(root);
     

@@ -3,7 +3,7 @@
 #include <yhge/Event/EventHandle.h>
 #include "yhgui/yhgui.h"
 #include "yhgui/interactive/DocumentTreeOrganizer.h"
-#include "yhmvc/Core/Layer.h"
+#include <yhmvc/yhmvc.h>
 #include "Scenes/GameSceneDirector.h"
 
 USING_NS_CC;
@@ -25,7 +25,7 @@ TestButtonController::~TestButtonController(void)
     CCLOG("TestButtonController destroy");
 }
 
-void TestButtonController::layerDidLoad()
+void TestButtonController::viewDidLoad()
 {
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     
@@ -34,7 +34,7 @@ void TestButtonController::layerDidLoad()
     treeOrganizer->registerWithTouchDispatcher();
     
     Component* document=Component::create();
-    m_layer->addChild(document);
+    m_view->addChild(document);
     
     treeOrganizer->setDocument(document);
     

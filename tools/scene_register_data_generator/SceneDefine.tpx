@@ -1,0 +1,10 @@
+#ifndef CCUI_SCENES_SCENEDIFINE_H_
+#define CCUI_SCENES_SCENEDIFINE_H_
+
+//this file generate by tool.do not modify derectely
+
+#{defineData}
+
+#pragma unused(#{unusedData})
+
+#endif //CCUI_SCENES_SCENEDIFINE_H_

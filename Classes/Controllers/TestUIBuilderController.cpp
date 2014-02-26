@@ -1,4 +1,4 @@
-#include "TestCCBBuilderController.h"
+#include "TestUIBuilderController.h"
 #include <yhge/yhge.h>
 #include <yhgui/yhgui.h>
 #include <yhmvc/yhmvc.h>
@@ -12,22 +12,23 @@ USING_NS_CC_YHMVC;
 
 NS_CC_UI_BEGIN
 
-TestCCBBuilderController::TestCCBBuilderController(void)
+TestUIBuilderController::TestUIBuilderController(void)
 {
     
 }
 
 
-TestCCBBuilderController::~TestCCBBuilderController(void)
+TestUIBuilderController::~TestUIBuilderController(void)
 {
-    CCLOG("TestCCBBuilderController destroy");
+    CCLOG("TestUIBuilderController destroy");
 }
 
-void TestCCBBuilderController::viewDidLoad()
+void TestUIBuilderController::viewDidLoad()
 {
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
 
+    
     
 }
 

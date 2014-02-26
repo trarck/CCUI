@@ -1,19 +1,18 @@
 #ifndef CCUI_CONTROLLERS_MAINCONTROLLER_H_
 #define CCUI_CONTROLLERS_MAINCONTROLLER_H_
 
-#include "yhmvc/Core/LayerController.h"
-#include "yhmvc/Core/Layer.h"
+#include <yhmvc/yhmvc.h>
 #include "CCUIMacros.h"
 
 NS_CC_UI_BEGIN
 
-class MainController:public yhmvc::LayerController
+class MainController:public yhmvc::Controller
 {
 public:
 	MainController(void);
 	~MainController(void);
 
-	void layerDidLoad();
+	void viewDidLoad();
 
 	void menuCloseCallback(CCObject* pSender);
     

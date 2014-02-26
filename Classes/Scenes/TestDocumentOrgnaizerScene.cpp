@@ -11,14 +11,14 @@ void TestDocumentOrgnaizerScene::loadContents()
 {
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestDocumentOrgnaizerController* testDocumentOrgnaizerController=new TestDocumentOrgnaizerController();
 	testDocumentOrgnaizerController->init();
     testDocumentOrgnaizerController->setPreferredContentSize(threeSegmentController->getBodyLayer()->getContentSize());
 
-	threeSegmentController->getBodyLayer()->addChild(testDocumentOrgnaizerController->getLayer());
-    addLayerController(testDocumentOrgnaizerController);
+	threeSegmentController->getBodyLayer()->addChild(testDocumentOrgnaizerController->getView());
+    addController(testDocumentOrgnaizerController);
     testDocumentOrgnaizerController->release();
     
 }
@@ -27,14 +27,14 @@ void TestDocumentOrgnaizerPerformanceScene::loadContents()
 {
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestDocumentOrgnaizerPerformanceController* testDocumentOrgnaizerController=new TestDocumentOrgnaizerPerformanceController();
 	testDocumentOrgnaizerController->init();
     testDocumentOrgnaizerController->setPreferredContentSize(threeSegmentController->getBodyLayer()->getContentSize());
 
-	threeSegmentController->getBodyLayer()->addChild(testDocumentOrgnaizerController->getLayer());
-    addLayerController(testDocumentOrgnaizerController);
+	threeSegmentController->getBodyLayer()->addChild(testDocumentOrgnaizerController->getView());
+    addController(testDocumentOrgnaizerController);
     testDocumentOrgnaizerController->release();
     
 }
@@ -43,14 +43,14 @@ void TestDocumentOrgnaizerZOrderScene::loadContents()
 {
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestDocumentOrgnaizerZOrderController* testDocumentOrgnaizerController=new TestDocumentOrgnaizerZOrderController();
 	testDocumentOrgnaizerController->init();
     testDocumentOrgnaizerController->setPreferredContentSize(threeSegmentController->getBodyLayer()->getContentSize());
 
-	threeSegmentController->getBodyLayer()->addChild(testDocumentOrgnaizerController->getLayer());
-    addLayerController(testDocumentOrgnaizerController);
+	threeSegmentController->getBodyLayer()->addChild(testDocumentOrgnaizerController->getView());
+    addController(testDocumentOrgnaizerController);
     testDocumentOrgnaizerController->release();
     
 }

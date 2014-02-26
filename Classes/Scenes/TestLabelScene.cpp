@@ -11,14 +11,14 @@ void TestLabelScene::loadContents()
 {
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestLabelController* testLabelController=new TestLabelController();
 	testLabelController->init();
     testLabelController->setPreferredContentSize(threeSegmentController->getBodyLayer()->getContentSize());
     
-	threeSegmentController->getBodyLayer()->addChild(testLabelController->getLayer());
-    addLayerController(testLabelController);
+	threeSegmentController->getBodyLayer()->addChild(testLabelController->getView());
+    addController(testLabelController);
     testLabelController->release();
     
 }

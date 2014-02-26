@@ -2,8 +2,7 @@
 #define CCUI_CONTROLLERS_TestComplexButtonController_H_
 
 #include <yhge/Event/Event.h>
-#include "yhmvc/Core/LayerController.h"
-#include "yhmvc/Core/Layer.h"
+#include <yhmvc/yhmvc.h>
 #include "CCUIMacros.h"
 
 NS_CC_UI_BEGIN
@@ -14,7 +13,7 @@ NS_CC_UI_BEGIN
  * 可以添加其它controller来作为显示内容
  * 由于结构简单不容易出错。
  */
-class TestComplexButtonController:public yhmvc::LayerController
+class TestComplexButtonController:public yhmvc::Controller
 {
 public:
 	
@@ -22,7 +21,7 @@ public:
     
 	~TestComplexButtonController(void);
 
-	void layerDidLoad();
+	void viewDidLoad();
 
     void onTouchDown(cocos2d::yhge::Event* event);
     void onTouchMove(cocos2d::yhge::Event* event);

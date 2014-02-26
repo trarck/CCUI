@@ -11,13 +11,13 @@ void TestComplexButtonScene::loadContents()
 {
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestComplexButtonController* testComplexButtonController=new TestComplexButtonController();
 	testComplexButtonController->init();
     
-	threeSegmentController->getBodyLayer()->addChild(testComplexButtonController->getLayer());
-    addLayerController(testComplexButtonController);
+	threeSegmentController->getBodyLayer()->addChild(testComplexButtonController->getView());
+    addController(testComplexButtonController);
     testComplexButtonController->release();
     
 }

@@ -26,24 +26,24 @@ TestLabelController::~TestLabelController(void)
     CCLOG("TestLabelController destroy");
 }
 
-void TestLabelController::layerDidLoad()
+void TestLabelController::viewDidLoad()
 {
     CCSize contentSize = this->getPreferredContentSize();
 
     //middle
     yhgui::LabelTTF* label1=yhgui::LabelTTF::create("this in middle", "Helvetica", 22);
     label1->setPosition(ccp(contentSize.width/2,contentSize.height/2));
-    m_layer->addChild(label1);
+    m_view->addChild(label1);
     
     //top
     yhgui::LabelTTF* label2=yhgui::LabelTTF::create("this in top", "Helvetica", 22);
     label2->setPosition(ccp(contentSize.width/2,contentSize.height));
-    m_layer->addChild(label2);
+    m_view->addChild(label2);
     
     //bottom
     yhgui::LabelTTF* label3=yhgui::LabelTTF::create("this in botton", "Helvetica", 22);
     label3->setPosition(ccp(contentSize.width/2,0));
-    m_layer->addChild(label3);
+    m_view->addChild(label3);
     
     CCLOG("size:%f,%f",label1->getContentSize().width,label1->getContentSize().height);
     CCLOG("size:%f,%f",label2->getContentSize().width,label2->getContentSize().height);

@@ -1,0 +1,25 @@
+#ifndef CCUI_SCENES_SCENEREGISTERDATA_H_
+#define CCUI_SCENES_SCENEREGISTERDATA_H_
+
+#include <yhmvc/Core/SceneDirector.h>
+#include "CCUIMacros.h"
+//this file generate by tools.do not modify directorly
+
+#{registerInclude}
+
+NS_CC_UI_BEGIN
+
+typedef struct SceneRegisterItem
+{
+    std::string name;
+    cocos2d::yhmvc::SceneCreate createFun;
+} SceneRegisterItem;
+
+static SceneRegisterItem kSceneRegisterData[]=
+{
+#{registerData}
+};
+
+NS_CC_UI_END
+
+#endif //CCUI_SCENES_SCENEREGISTERDATA_H_

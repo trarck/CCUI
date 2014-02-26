@@ -11,14 +11,14 @@ void TestListOrgnaizerScene::loadContents()
 {	
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestListOrgnaizerController* testListOrgnaizerController=new TestListOrgnaizerController();
 	testListOrgnaizerController->init();
     testListOrgnaizerController->setPreferredContentSize(threeSegmentController->getBodyLayer()->getContentSize());
 
-	threeSegmentController->getBodyLayer()->addChild(testListOrgnaizerController->getLayer());
-    addLayerController(testListOrgnaizerController);
+	threeSegmentController->getBodyLayer()->addChild(testListOrgnaizerController->getView());
+    addController(testListOrgnaizerController);
     testListOrgnaizerController->release();
 }
 
@@ -26,14 +26,14 @@ void TestListOrgnaizerPerformanceScene::loadContents()
 {	
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestListOrgnaizerPerformanceController* testListOrgnaizerController=new TestListOrgnaizerPerformanceController();
 	testListOrgnaizerController->init();
     testListOrgnaizerController->setPreferredContentSize(threeSegmentController->getBodyLayer()->getContentSize());
 
-	threeSegmentController->getBodyLayer()->addChild(testListOrgnaizerController->getLayer());
-    addLayerController(testListOrgnaizerController);
+	threeSegmentController->getBodyLayer()->addChild(testListOrgnaizerController->getView());
+    addController(testListOrgnaizerController);
     testListOrgnaizerController->release();
 }
 
@@ -41,14 +41,14 @@ void TestListOrgnaizerZOrderScene::loadContents()
 {	
 	ThreeSegmentScene::loadContents();
     
-    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getLayerControllerByName("ThreeSegmentController"));
+    ThreeSegmentController* threeSegmentController=static_cast<ThreeSegmentController*>(getControllerByName("ThreeSegmentController"));
 
 	TestListOrgnaizerZOrderController* testListOrgnaizerController=new TestListOrgnaizerZOrderController();
 	testListOrgnaizerController->init();
 	testListOrgnaizerController->setPreferredContentSize(threeSegmentController->getBodyLayer()->getContentSize());
     
-	threeSegmentController->getBodyLayer()->addChild(testListOrgnaizerController->getLayer());
-    addLayerController(testListOrgnaizerController);
+	threeSegmentController->getBodyLayer()->addChild(testListOrgnaizerController->getView());
+    addController(testListOrgnaizerController);
     testListOrgnaizerController->release();
 }
 

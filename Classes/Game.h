@@ -22,7 +22,7 @@ public:
     static Game* getInstance();
 
     /**
-	 * 设置场景管理
+	 * 璁剧疆鍦烘櫙绠＄悊
 	 */
     void setupSceneDirector();
 };

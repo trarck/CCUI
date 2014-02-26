@@ -1,0 +1,26 @@
+{	
+	"scenes":[
+		"MainScene","TestButtonScene","TestComplexButtonScene","TestDocumentOrgnaizerScene","TestListOrgnaizerScene","TestLabelScene",
+		
+		{
+			"name":"TestDocumentOrgnaizerPerformanceScene",
+			"path":"Scenes/TestDocumentOrgnaizerScene.h"
+		},
+		{
+			"name":"TestDocumentOrgnaizerZOrderScene",
+			"path":"Scenes/TestDocumentOrgnaizerScene.h"
+		},
+		
+		{
+			"name":"TestListOrgnaizerPerformanceScene",
+			"path":"Scenes/TestListOrgnaizerScene.h"
+		},
+		{
+			"name":"TestListOrgnaizerZOrderScene",
+			"path":"Scenes/TestListOrgnaizerScene.h"
+		},
+		"TestUIBuilderScene"
+	]
+		
+	
+}

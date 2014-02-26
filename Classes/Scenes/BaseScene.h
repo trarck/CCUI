@@ -10,7 +10,7 @@
 #define CCUI_SCENES_BASESCENE_H_
 
 #include "cocos2d.h"
-#include <yhmvc/Core/Scene.h>
+#include <yhmvc/yhmvc.h>
 #include "CCUIMacros.h"
 
 NS_CC_UI_BEGIN
