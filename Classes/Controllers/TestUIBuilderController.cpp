@@ -17,7 +17,6 @@ TestUIBuilderController::TestUIBuilderController(void)
     
 }
 
-
 TestUIBuilderController::~TestUIBuilderController(void)
 {
     CCLOG("TestUIBuilderController destroy");
@@ -28,8 +27,10 @@ void TestUIBuilderController::viewDidLoad()
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     CCPoint origin = CCDirector::sharedDirector()->getVisibleOrigin();
 
-    
-    
+    UIBuilder* uiBuilder=new UIBuilder();
+    uiBuilder->init();
+    CCNode* root=uiBuilder->buildWithJSONFile("ui/test.json");
+    m_view->addChild(root);
 }
 
 NS_CC_UI_END

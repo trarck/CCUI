@@ -1,0 +1,41 @@
+{
+	"version":1,
+	"formate":1,
+	"graphData":{
+		"type":"Node",
+		"name":"aRoot",
+		"properties":{
+			
+		},
+		"children":[
+			{
+				"type":"Sprite",
+				"properties":{
+					"x":100,
+					"y":100,
+					"asset":"CloseNormal.png"
+				}
+			},
+			{
+				"type":"Sprite",
+				"properties":{
+					"x":100,
+					"y":140,
+					"scaleX":2,
+					"scaleY":2,
+					"asset":"CloseNormal.png"
+				}
+			},
+			{
+				"type":"Sprite",
+				"properties":{
+					"x":140,
+					"y":100,
+					"width":80,
+					"height":80,
+					"asset":"CloseNormal.png"
+				}
+			}
+		]
+	}
+}
