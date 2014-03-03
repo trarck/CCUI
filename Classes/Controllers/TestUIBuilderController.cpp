@@ -31,6 +31,8 @@ void TestUIBuilderController::viewDidLoad()
     uiBuilder->init();
     CCNode* root=uiBuilder->buildWithJSONFile("ui/test.json");
     m_view->addChild(root);
+    
+    
 }
 
 NS_CC_UI_END

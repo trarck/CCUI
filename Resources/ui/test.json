@@ -19,6 +19,16 @@
 			{
 				"type":"Sprite",
 				"properties":{
+					"x":140,
+					"y":100,
+					"width":80,
+					"height":80,
+					"asset":"CloseNormal.png"
+				}
+			},
+			{
+				"type":"Sprite",
+				"properties":{
 					"x":100,
 					"y":140,
 					"scaleX":2,
@@ -27,13 +37,40 @@
 				}
 			},
 			{
-				"type":"Sprite",
+				"type":"CCLabelTTF",
 				"properties":{
-					"x":140,
+					"text":"hello",
+					"x":400,
 					"y":100,
-					"width":80,
-					"height":80,
-					"asset":"CloseNormal.png"
+					"fontFamily":"Marker Felt.ttf",
+					"fontSize":22
+				}
+			},
+			{
+				"type":"CCLabelTTF",
+				"properties":{
+					"text":"hello",
+					"x":400,
+					"y":140,
+					"fontFamily":"Arial-Black",
+					"fontSize":32,
+					"color":[244,0,0]
+				}
+			},
+			{
+				"type":"CCLabelBMFont",
+				"properties":{
+					"text":"helloa",
+					"x":400,
+					"y":180,
+					"fntFile":"fonts/boundsTestFont.fnt",
+					"alignment":2
+				},
+				"events":{
+					"touchMove":{
+						"target":"default",
+						"method":"funa"
+					}
 				}
 			}
 		]
