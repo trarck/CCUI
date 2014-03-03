@@ -3,6 +3,7 @@
 
 #include <yhge/Event/Event.h>
 #include <yhmvc/yhmvc.h>
+#include <yhgui/yhgui.h>
 #include "CCUIMacros.h"
 
 NS_CC_UI_BEGIN
@@ -22,6 +23,10 @@ public:
 	~TestUIBuilderController(void);
 
 	void viewDidLoad();
+    
+    void onTestA(yhge::Event* event);
+    
+    yhgui::ElementEventParser* createEventParser();
 };
 
 NS_CC_UI_END

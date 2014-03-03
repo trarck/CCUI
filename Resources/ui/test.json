@@ -72,6 +72,37 @@
 						"method":"funa"
 					}
 				}
+			},
+			{
+				"type":"NormalButton",
+				"properties":{
+					"x":400,
+					"y":380,
+					
+					"label":{
+						"type":1,
+						"text":"hello",
+						"fontFamily":"Arial-Black",
+						"fontSize":42
+					},
+									
+					"states":{
+						"normal":{
+							"color":[255,255,255]
+						},
+						
+						"pressed":{
+							"color":[255,255,0]
+						},
+						
+						"disabled":{
+							"color":[128,128,128]
+						}
+					}
+				},
+				"events":{
+					"touchUpInside":"testa"
+				}
 			}
 		]
 	}
