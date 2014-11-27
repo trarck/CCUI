@@ -12,6 +12,7 @@
 #include "Scenes/TestListOrgnaizerScene.h"
 #include "Scenes/TestLabelScene.h"
 #include "Scenes/TestUIBuilderScene.h"
+#include "Scenes/TestImageScene.h"
 
 
 NS_CC_UI_BEGIN
@@ -35,6 +36,7 @@ static SceneRegisterItem kSceneRegisterData[]=
 	{kTestListOrgnaizerPerformanceScene,SCENE_CREATE_SELECTOR(TestListOrgnaizerPerformanceScene::create)},
 	{kTestListOrgnaizerZOrderScene,SCENE_CREATE_SELECTOR(TestListOrgnaizerZOrderScene::create)},
 	{kTestUIBuilderScene,SCENE_CREATE_SELECTOR(TestUIBuilderScene::create)},
+    {kTestImageScene,SCENE_CREATE_SELECTOR(TestImageScene::create)},
 
 };
 

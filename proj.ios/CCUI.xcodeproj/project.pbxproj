@@ -125,6 +125,8 @@
 		577CEC8718BDE239000500B5 /* libyhgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 577A79B4186C3D1800F1B5D5 /* libyhgui.a */; };
 		577CEC8818BDE23E000500B5 /* libyhge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 577A7A18186D6B7F00F1B5D5 /* libyhge.a */; };
 		577CECB118BF272C000500B5 /* ui in Resources */ = {isa = PBXBuildFile; fileRef = 577CECB018BF272C000500B5 /* ui */; };
+		57F0132618FE84BC00CB32E9 /* TestImageScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57F0132418FE84BC00CB32E9 /* TestImageScene.cpp */; };
+		57F0132C18FE84CD00CB32E9 /* TestImageController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57F0132A18FE84CD00CB32E9 /* TestImageController.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
@@ -421,6 +423,10 @@
 		577A7A631871181300F1B5D5 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Classes/Game.h; sourceTree = "<group>"; };
 		577A7A641871181300F1B5D5 /* Messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Messages.h; path = ../Classes/Messages.h; sourceTree = "<group>"; };
 		577CECB018BF272C000500B5 /* ui */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ui; sourceTree = "<group>"; };
+		57F0132418FE84BC00CB32E9 /* TestImageScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestImageScene.cpp; sourceTree = "<group>"; };
+		57F0132518FE84BC00CB32E9 /* TestImageScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestImageScene.h; sourceTree = "<group>"; };
+		57F0132A18FE84CD00CB32E9 /* TestImageController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestImageController.cpp; sourceTree = "<group>"; };
+		57F0132B18FE84CD00CB32E9 /* TestImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestImageController.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -894,6 +900,8 @@
 				57644BEA187A928C006B63CF /* TestComplexButtonController.h */,
 				577A7A3C1871180700F1B5D5 /* TestDocumentOrgnaizerController.cpp */,
 				577A7A3D1871180700F1B5D5 /* TestDocumentOrgnaizerController.h */,
+				57F0132A18FE84CD00CB32E9 /* TestImageController.cpp */,
+				57F0132B18FE84CD00CB32E9 /* TestImageController.h */,
 				57644BD5187539E9006B63CF /* TestLabelController.cpp */,
 				57644BD6187539E9006B63CF /* TestLabelController.h */,
 				577A7A3E1871180700F1B5D5 /* TestListOrgnaizerController.cpp */,
@@ -926,6 +934,8 @@
 				57644BE7187A9274006B63CF /* TestComplexButtonScene.h */,
 				577A7A4D1871180700F1B5D5 /* TestDocumentOrgnaizerScene.cpp */,
 				577A7A4E1871180700F1B5D5 /* TestDocumentOrgnaizerScene.h */,
+				57F0132418FE84BC00CB32E9 /* TestImageScene.cpp */,
+				57F0132518FE84BC00CB32E9 /* TestImageScene.h */,
 				57644BCF187539AC006B63CF /* TestLabelScene.cpp */,
 				57644BD0187539AC006B63CF /* TestLabelScene.h */,
 				577A7A4F1871180700F1B5D5 /* TestListOrgnaizerScene.cpp */,
@@ -1103,6 +1113,7 @@
 				15A3DA371682F826002FB0C5 /* CCBValue.cpp in Sources */,
 				577A7813186BF43300F1B5D5 /* json_value.cpp in Sources */,
 				15A3DA381682F826002FB0C5 /* CCControlButtonLoader.cpp in Sources */,
+				57F0132618FE84BC00CB32E9 /* TestImageScene.cpp in Sources */,
 				15A3DA391682F826002FB0C5 /* CCControlLoader.cpp in Sources */,
 				15A3DA3A1682F826002FB0C5 /* CCData.cpp in Sources */,
 				15A3DA3B1682F826002FB0C5 /* CCLabelBMFontLoader.cpp in Sources */,
@@ -1159,6 +1170,7 @@
 				57644BE8187A9274006B63CF /* TestComplexButtonScene.cpp in Sources */,
 				1AC3624B16D4A1E8000847F2 /* main.m in Sources */,
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
+				57F0132C18FE84CD00CB32E9 /* TestImageController.cpp in Sources */,
 				577A7A5F1871180700F1B5D5 /* TestListOrgnaizerScene.cpp in Sources */,
 				577A7A5D1871180700F1B5D5 /* TestButtonScene.cpp in Sources */,
 				1A8F3B6E175E05DA00049216 /* Animation.cpp in Sources */,

@@ -14,6 +14,7 @@ static const char* kTestDocumentOrgnaizerZOrderScene="TestDocumentOrgnaizerZOrde
 static const char* kTestListOrgnaizerPerformanceScene="TestListOrgnaizerPerformanceScene";
 static const char* kTestListOrgnaizerZOrderScene="TestListOrgnaizerZOrderScene";
 static const char* kTestUIBuilderScene="TestUIBuilderScene";
+static const char* kTestImageScene="TestImageScene";
 
 
 #pragma unused(kMainScene,kTestButtonScene,kTestComplexButtonScene,kTestDocumentOrgnaizerScene,kTestListOrgnaizerScene,kTestLabelScene,kTestDocumentOrgnaizerPerformanceScene,kTestDocumentOrgnaizerZOrderScene,kTestListOrgnaizerPerformanceScene,kTestListOrgnaizerZOrderScene,kTestUIBuilderScene)

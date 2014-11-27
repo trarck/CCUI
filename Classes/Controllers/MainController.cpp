@@ -37,6 +37,7 @@ void MainController::viewDidLoad()
 	createTestMenuItem("test document orgnaizer",kTestDocumentOrgnaizerScene);
 	createTestMenuItem("test list orgnaizer",kTestListOrgnaizerScene);
     createTestMenuItem("test ui builder",kTestUIBuilderScene);
+    createTestMenuItem("test image",kTestImageScene);
 
 	CCSize screenSize=CCDirector::sharedDirector()->getWinSize();
 
@@ -45,7 +46,7 @@ void MainController::viewDidLoad()
 	pMenu->setPosition( ccp(screenSize.width/2,0) );
 	pMenu->alignItemsVertically();
     m_view->addChild(pMenu, 1);
-
+        
     /////////////////////////////
     // 3. add your codes below...
     

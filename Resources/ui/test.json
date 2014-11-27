@@ -8,6 +8,14 @@
 			
 		},
 		"children":[
+/*			{
+				"type":"Include",
+				"file":"a.json",
+				"properties":{
+					"x":100,
+					"y":100
+				}
+			},*/
 			{
 				"type":"Sprite",
 				"properties":{

@@ -5,7 +5,7 @@
 		"type":"Scene",
 		"properties":{
 			"name":"root",
-			"controller":[
+			"controllers":[
 				{
 					"type":"MainController",
 					"properties":{
@@ -16,14 +16,14 @@
 					"type":"HeaderController",
 					"properties":{
 						"name":"header",
-						"view":"header.json"
+						"viewFile":"header.json"
 					}
 				},
 				{
 					"type":"FooterController",
 					"properties":{
 						"name":"footer",
-						"view":"footer.json"
+						"viewFile":"footer.json"
 					}
 				}
 			]
